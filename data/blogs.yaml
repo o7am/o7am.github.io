@@ -1,0 +1,32 @@
+# List of blog posts. Each has slug (filename), per-locale title/description/body, date, image.
+- id: blog1
+  slug: blog1
+  title:
+    pl: "Druk 3D w małym biznesie: rewolucja w tworzeniu produktów"
+    en: "3D printing in small business: a revolution in product creation"
+  description:
+    pl: "Artykuły o druku 3D, Data Engineering i technologiach dla biznesu."
+    en: "Articles on 3D printing, Data Engineering and tech for business."
+  date: "25 sty"
+  image: "assets/blogs/1/entry1.webp"
+  subtitle:
+    pl: "Trendy w druku 3D"
+    en: "3D printing trends"
+  body:
+    pl: |
+      <h2>Wprowadzenie do druku 3D w małym biznesie</h2>
+      <p>Druk 3D to technologia, która w ostatnich latach zyskała na popularności i zaczęła rewolucjonizować sposób, w jaki firmy produkują swoje produkty. Dla małych przedsiębiorstw, które często zmagają się z ograniczonymi zasobami, druk 3D oferuje niespotykane dotąd możliwości, które mogą znacząco wpłynąć na efektywność i kreatywność w prowadzeniu działalności. Od możliwości szybkiego prototypowania po produkcję gotowych produktów, technologia ta staje się kluczowym narzędziem w arsenale nowoczesnych przedsiębiorców.</p>
+      <h2>Korzyści z zastosowania druku 3D w małym biznesie</h2>
+      <p>Jedną z największych zalet druku 3D jest jego zdolność do znacznego obniżenia kosztów produkcji. Tradycyjne metody wytwarzania często wymagają dużych inwestycji w maszyny i materiały, podczas gdy druk 3D pozwala na tworzenie produktów z mniejszymi nakładami finansowymi oraz w krótszym czasie. Dzięki temu małe firmy mogą szybko wprowadzać innowacje i dostosowywać swoje produkty do potrzeb rynku.</p>
+      <p>Dodatkowo, druk 3D umożliwia większą swobodę w projektowaniu. Przedsiębiorcy mogą eksperymentować z różnymi kształtami i materiałami, co pozwala im na tworzenie unikalnych produktów, które wyróżniają się na tle konkurencji.</p>
+      <h2>Przykłady zastosowania druku 3D w małych firmach</h2>
+      <p>Wielu małych przedsiębiorców już korzysta z możliwości, jakie daje druk 3D. Przykłady obejmują produkcję niestandardowych akcesoriów, części zamiennych do maszyn, a nawet biżuterii.</p>
+      <h2>Podsumowanie: Druk 3D jako klucz do sukcesu w małym biznesie</h2>
+      <p>Druk 3D ma potencjał, by zrewolucjonizować sposób, w jaki małe firmy projektują i produkują swoje produkty. Dzięki możliwościom oszczędnościowym, elastyczności oraz łatwości prototypowania, przedsiębiorcy mogą nie tylko zaoszczędzić czas i koszty, ale także znacznie zwiększyć swoją kreatywność.</p>
+    en: |
+      <h2>Introduction to 3D printing in small business</h2>
+      <p>3D printing has gained popularity in recent years and is revolutionising how companies manufacture products. For small businesses with limited resources, 3D printing offers unprecedented possibilities that can significantly boost efficiency and creativity.</p>
+      <h2>Benefits of 3D printing in small business</h2>
+      <p>One of the biggest advantages of 3D printing is its ability to reduce production costs. Traditional manufacturing often requires large investments in machinery and materials, while 3D printing allows creating products with lower financial outlay and in less time.</p>
+      <h2>Examples and summary</h2>
+      <p>Many small businesses already use 3D printing for custom accessories, spare parts, and more. 3D printing has the potential to revolutionise how small firms design and produce their products.</p>

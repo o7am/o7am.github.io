@@ -1,0 +1,22 @@
+# o7AM
+
+> o7AM: custom 3D printing, Data Engineering, and ML solutions for business. Based in Radzyń, Wielkopolska.
+
+## Core
+
+- [Home](https://o7.am/): Company overview, services, and contact.
+- [Services](https://o7.am/services.html): Custom 3D printing and Data Engineering offerings.
+- [Portfolio](https://o7.am/portfolio.html): Project showcases including 3D prints and emoji/kaomoji.
+- [Blog](https://o7.am/blog.html): Articles on 3D printing, Data Engineering, and business tech.
+- [Contact](https://o7.am/contact.html): Location, phone, and email.
+
+## Services
+
+- [Custom 3D Printing](https://o7.am/services/3d.html): Prototypes, promotional items, and bespoke 3D-printed parts.
+- [Data Engineering](https://o7.am/services/de.html): ELT/ETL, Spark, Trino, Flink, and data pipelines.
+
+## Optional
+
+- [Portfolio: Branded V60-2 Hario filter holder](https://o7.am/portfolios/3d_prints.html): 3D-printed filter holder project.
+- [Portfolio: Emojis (kaomoji)](https://o7.am/portfolios/emoji.html): Collection of text faces / kaomoji.
+- [English site](https://o7.am/en/): English version of the site (en/).
