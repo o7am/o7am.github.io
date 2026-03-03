@@ -10,7 +10,7 @@
             {% for b in blogs %}
             <a class="blog-archive__item" href="{{ base }}blogs/{{ b.slug }}.html">
                 <div class="blog-archive__item-image">
-                    <img alt="{{ b.title[locale] }}" src="{{ base }}{{ b.image }}" loading="lazy">
+                    <img alt="{{ b.title[locale] }}" src="{{ root }}{{ b.image }}" loading="lazy">
                 </div>
                 <div class="blog-archive__item-text">
                     <p class="title">{{ b.title[locale] }}</p>
