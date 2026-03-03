@@ -1,0 +1,6 @@
+# Worktrees (do not commit worktree directories)
+.worktrees/
+
+# macOS
+.DS_Store
+._*
