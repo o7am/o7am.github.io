@@ -5,10 +5,6 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://o7.am/about.html</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://o7.am/services.html</loc>
     <changefreq>monthly</changefreq>
   </url>
@@ -46,10 +42,6 @@
   </url>
   <url>
     <loc>https://o7.am/en/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://o7.am/en/about.html</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
