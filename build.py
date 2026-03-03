@@ -22,8 +22,19 @@ def load_yaml(name):
         return yaml.safe_load(f)
 
 
-def base_prefix(rel_path):
-    """Path from output file to site root for href/src (e.g. '' or '../' or '../../')."""
+def locale_base_prefix(rel_path):
+    """Path from output file's directory to locale root (for same-locale page links)."""
+    path = Path(rel_path)
+    parent_parts = path.parent.parts
+    if rel_path.startswith("en/"):
+        depth = len(parent_parts) - 1
+        return "../" * depth if depth > 0 else ""
+    depth = len(parent_parts)
+    return "../" * depth if depth else ""
+
+
+def root_prefix(rel_path):
+    """Path from output file's directory to site root (for static assets: CSS, JS, assets/)."""
     depth = len(Path(rel_path).parent.parts)
     return "../" * depth if depth else ""
 
@@ -81,13 +92,15 @@ def main():
             pages.append((f"{prefix}portfolios/{slug}.html", "portfolio_item.html", {"item": p, "title": title, "description": desc, "canonical_path": f"{prefix}portfolios/{slug}.html"}))
 
     for rel_path, template_name, ctx in pages:
-        base = base_prefix(rel_path)
+        base = locale_base_prefix(rel_path)
+        root = root_prefix(rel_path)
         locale = "en" if rel_path.startswith("en/") else "pl"
         pl_path = rel_path[3:] if rel_path.startswith("en/") else rel_path
         en_path = "en/" + rel_path if not rel_path.startswith("en/") else rel_path
         other_lang_href = f"en/{rel_path}" if locale == "pl" else f"../{rel_path[3:]}"
         full_ctx = {
             "base": base,
+            "root": root,
             "locale": locale,
             "t": data["i18n"][locale],
             "site_url": SITE_URL,
@@ -125,6 +138,16 @@ def main():
             src = root / rel_path
             if src.exists():
                 shutil.copy2(src, out / rel_path)
+
+    # Redirect /en.html to EN homepage (GitHub Pages doesn't serve /en as directory index)
+    (out / "en.html").write_text(
+        '<!DOCTYPE html><html><head><meta charset="utf-8">'
+        '<meta http-equiv="refresh" content="0;url=en/index.html">'
+        '<script>location.href="en/index.html";</script>'
+        '<title>Redirect to English</title></head>'
+        '<body><p><a href="en/index.html">English version</a></p></body></html>',
+        encoding="utf-8",
+    )
 
     print(f"Built {len(pages)} pages into {OUT_DIR}/")
 

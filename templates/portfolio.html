@@ -9,7 +9,7 @@
             {% for p in portfolios %}
             <a href="{{ base }}portfolios/{{ p.slug }}.html" class="blog-archive__item">
                 <div class="blog-archive__item-image">
-                    <img loading="lazy" src="{{ base }}{{ p.image }}" alt="{{ p.title[locale] }}">
+                    <img loading="lazy" src="{{ root }}{{ p.image }}" alt="{{ p.title[locale] }}">
                 </div>
                 <div class="blog-archive__item-text">
                     <p class="title">{{ p.title[locale] }}</p>
