@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block main %}
+<section class="page-header" style="position: relative; pointer-events: auto;">
+    <h1>{{ t.services['3d_short'] }}</h1>
+    <p>{{ t.services['3d_teaser'] }}</p>
+</section>
+<section class="single-service__gallery" style="position: relative; pointer-events: auto;">
+    <div class="single-service__gallery-container">
+        <div class="single-service__gallery-items">
+            <div class="single-service__gallery-item">
+                <img loading="lazy" src="{{ base }}assets/index/slider/3d.jpg" class="gallery-image" alt="3D_COVER">
+            </div>
+        </div>
+    </div>
+</section>
+<div id="image-popup" style="display:none;">
+    <span id="close-popup">×</span>
+    <img loading="lazy" id="popup-img" src="">
+    <a id="prev" class="control">❞</a>
+    <a id="next" class="control">❟</a>
+</div>
+<div class="smaller-text" style="position: relative; pointer-events: auto;">
+    <div class="smaller-text__container">
+        <div>
+            <h2>Dlaczego warto skorzystać z druku 3D na zamówienie</h2>
+            <p>Oferujemy usługi druku 3D, które pozwalają na realizację indywidualnych projektów dostosowanych do potrzeb naszych klientów. Dzięki nowoczesnej technologii możemy tworzyć skomplikowane modele, prototypy, części zamienne oraz unikalne produkty. Wysoka jakość materiałów, wsparcie ekspertów na każdym etapie i elastyczne podejście do projektowania. Z nami możesz zrealizować nawet najbardziej ambitne projekty.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

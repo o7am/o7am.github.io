@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block main %}
+<div style="position: relative; pointer-events: auto;" class="">
+    <section class="page-header">
+        <h1>{{ blog.title[locale] }}</h1>
+        <p>{{ blog.subtitle[locale] }}</p>
+        <span class="date">{{ blog.date }}</span>
+    </section>
+    <div class="wider-photo">
+        <img loading="lazy" src="{{ base }}{{ blog.image }}" alt="{{ blog.title[locale] }}">
+    </div>
+    <div class="smaller-text">
+        <div class="smaller-text__container">
+            {{ blog.body[locale] | safe }}
+        </div>
+    </div>
+</div>
+{% endblock %}

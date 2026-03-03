@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block main %}
+<section class="page-header">
+    <h1>{{ t.contact.page_title }}</h1>
+</section>
+<section class="contact-page">
+    <div class="contact-page__container">
+        <div class="contact-page__info">
+            <div class="contact-page__item">
+                <svg width="66" height="64" viewBox="0 0 66 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 20.2297C1 14.9904 1 12.3708 2.39605 10.8429C2.8917 10.3004 3.49412 9.86624 4.16548 9.56758C6.05646 8.72633 8.54165 9.55474 13.512 11.2115C17.3067 12.4764 19.2041 13.1089 21.1212 13.0434C21.8254 13.0193 22.5254 12.9256 23.211 12.7635C25.0779 12.3222 26.7419 11.2129 30.0702 8.9941L34.9851 5.71734C39.2485 2.8752 41.3801 1.45415 43.827 1.12647C46.274 0.798794 48.7042 1.60893 53.565 3.22919L57.7065 4.60964C61.2265 5.78301 62.9865 6.36971 63.9934 7.76644C65 9.16317 65 11.0184 65 14.7289V43.6299C65 48.8691 65 51.4888 63.6041 53.0166C63.1084 53.5592 62.5058 53.9933 61.8345 54.292C59.9436 55.1332 57.4583 54.3048 52.488 52.6479C48.6932 51.3832 46.7959 50.7507 44.8788 50.8161C44.1748 50.8403 43.4747 50.9338 42.7892 51.0959C40.9221 51.5371 39.2581 52.6465 35.9298 54.8655L31.0149 58.1419C26.7515 60.9843 24.6199 62.4054 22.1731 62.7329C19.7262 63.0607 17.2958 62.2504 12.435 60.6301L8.29358 59.2499C4.77348 58.0765 3.0134 57.4899 2.00672 56.0929C1 54.6963 1 52.841 1 49.1304V20.2297Z" stroke="#E07100" stroke-width="1.5"></path>
+                </svg>
+                <span>{{ t.contact.our_location }}</span>
+                <p>{{ t.contact.address_line1 }}<br>{{ t.contact.address_line2 }}</p>
+            </div>
+            <div class="contact-page__item phone">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M48 1H16V63H48V1Z" stroke="#E07100" stroke-width="2" stroke-miterlimit="10"></path>
+                    <path d="M28 5H36" stroke="#E07100" stroke-width="2" stroke-miterlimit="10"></path>
+                    <path d="M16 51H48" stroke="#E07100" stroke-width="2" stroke-miterlimit="10"></path>
+                    <path d="M16 9H48" stroke="#E07100" stroke-width="2" stroke-miterlimit="10"></path>
+                    <path d="M32 59C33.1046 59 34 58.1046 34 57C34 55.8954 33.1046 55 32 55C30.8954 55 30 55.8954 30 57C30 58.1046 30.8954 59 32 59Z" stroke="#E07100" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="bevel"></path>
+                </svg>
+                <span>{{ t.contact.call_us }}</span>
+                <a href="tel:+48 579 057 915">+48 579 057 915</a>
+            </div>
+            <div class="contact-page__item">
+                <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.cls-1,.cls-2{fill:none;stroke:var(--primarycolor);stroke-linejoin:round;stroke-width:1px;}.cls-2{stroke-linecap:round;}</style></defs><rect class="cls-1" height="42.33" rx="4.61" ry="4.61" width="62" x="1" y="10.67"></rect><polyline class="cls-2" points="5 16 32 32 59 16"></polyline><line class="cls-2" x1="24.91" x2="5" y1="27.8" y2="44"></line><line class="cls-2" x1="39.09" x2="59" y1="27.8" y2="45"></line></g></svg>
+                <span>{{ t.contact.write_us }}</span>
+                <a href="mailto:contact@o7.am">contact@o7.am</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="footer__map">
+    <iframe aria-label="Dojazdowa,1" loading="lazy" src="https://maps.google.com/maps?q=Dojazdowa,radzyny%20polska&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near" title="Dojazdowa, radzyny"></iframe>
+</div>
+{% endblock %}

@@ -1,6 +1,8 @@
 # Worktrees (do not commit worktree directories)
 .worktrees/
-
+.docs/
+out/
+.venv/
 # macOS
 .DS_Store
 ._*

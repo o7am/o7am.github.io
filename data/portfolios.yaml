@@ -1,0 +1,27 @@
+# Portfolio items. slug = output filename (e.g. 3d_prints.html).
+- id: "3d_prints"
+  slug: "3d_prints"
+  title:
+    pl: "Brandowany uchwyt na filtry V60-2 Hario"
+    en: "Branded V60-2 Hario filter holder"
+  image: "assets/portfolios/1/cover.jpg"
+  gallery:
+    - "assets/portfolios/1/cover.jpg"
+    - "assets/portfolios/1/entry1.jpg"
+  body:
+    pl: |
+      <h2>Opis projektu</h2>
+      <p>Zamówiony, spersonalizowany uchwyt na papierowe filtry do dripa Hario V60-2. Projekt wykonany w druku 3D, dopasowany do rozmiaru filtrów, z możliwością naniesienia logo lub napisu. Idealny jako gadżet reklamowy dla kawiarni, palarni kawy lub marek kawowych – łączy funkcjonalność z promocją marki.</p>
+    en: |
+      <h2>Project description</h2>
+      <p>Custom-ordered holder for paper filters for the Hario V60-2 drip brewer. The project was 3D-printed, tailored to the filter size, with the option to add a logo or text. Ideal as a promotional item for cafés, coffee roasters or coffee brands—combining functionality with brand promotion.</p>
+
+- id: "emoji"
+  slug: "emoji"
+  title:
+    pl: "Emoji i kaomoji"
+    en: "Emojis (kaomoji)"
+  image: "assets/portfolios/2/cover.jpg"
+  body:
+    pl: ""
+    en: ""

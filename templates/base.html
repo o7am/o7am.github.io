@@ -1,0 +1,16 @@
+<html lang="{{ locale }}">
+<head>
+{% include 'partials/head.html' %}
+</head>
+<body class="{{ body_class | default('single-page') }}">
+    <div class="app-container">
+        {% include 'partials/header.html' %}
+
+        {% block main %}{% endblock %}
+
+        {% include 'partials/cta.html' %}
+        {% include 'partials/footer.html' %}
+    </div>
+</body>
+</html>
+<script src="{{ base }}app.js" type="text/javascript"></script>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block main %}
+<section class="page-header">
+    <h1>{{ t.portfolio.page_title }}</h1>
+</section>
+<section class="blog-archive">
+    <div class="blog-archive__container">
+        <div class="blog-archive__items">
+            {% for p in portfolios %}
+            <a href="{{ base }}portfolios/{{ p.slug }}.html" class="blog-archive__item">
+                <div class="blog-archive__item-image">
+                    <img loading="lazy" src="{{ base }}{{ p.image }}" alt="{{ p.title[locale] }}">
+                </div>
+                <div class="blog-archive__item-text">
+                    <p class="title">{{ p.title[locale] }}</p>
+                    <span class="read-more">{{ t.portfolio.read_more }}</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
