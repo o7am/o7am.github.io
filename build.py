@@ -74,6 +74,7 @@ def main():
         pages.append((f"{prefix}contact.html", "contact.html", {"title": t["meta"]["contact_title"], "description": t["meta"]["contact_description"], "canonical_path": f"{prefix}contact.html"}))
 
         # Service subpages
+        pages.append((f"{prefix}services/it.html", "service_it.html", {"title": t["services"]["it_title"], "description": t["services"].get("it_description", t["meta"]["services_description"]), "canonical_path": f"{prefix}services/it.html"}))
         pages.append((f"{prefix}services/3d.html", "service_3d.html", {"title": t["services"]["3d_title"], "description": t["services"].get("3d_description", t["meta"]["services_description"]), "canonical_path": f"{prefix}services/3d.html"}))
         pages.append((f"{prefix}services/de.html", "service_de.html", {"title": t["services"]["de_title"], "description": t["services"].get("de_description", t["meta"]["services_description"]), "canonical_path": f"{prefix}services/de.html"}))
 

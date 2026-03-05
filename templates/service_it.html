@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block main %}
 <section class="page-header" style="position: relative; pointer-events: auto;">
-    <h1>{{ t.services['3d_short'] }}</h1>
-    <p>{{ t.services['3d_teaser'] }}</p>
+    <h1>{{ t.services.it_short }}</h1>
+    <p>{{ t.services.it_teaser }}</p>
 </section>
 <section class="single-service__gallery" style="position: relative; pointer-events: auto;">
     <div class="single-service__gallery-container">
         <div class="single-service__gallery-items">
             <div class="single-service__gallery-item">
-                <img loading="lazy" src="{{ root }}assets/index/slider/3d.jpg" class="gallery-image" alt="3D_COVER">
+                <img loading="lazy" src="{{ root }}assets/services/IT/cover.jpg" class="gallery-image it-cover" alt="IT Support">
             </div>
         </div>
     </div>
@@ -22,8 +22,8 @@
 <div class="smaller-text" style="position: relative; pointer-events: auto;">
     <div class="smaller-text__container">
         <div>
-            <h2>{{ t.services['3d_heading'] }}</h2>
-            <p>{{ t.services['3d_body'] }}</p>
+            <h2>{{ t.services.it_heading }}</h2>
+            <p>{{ t.services.it_body }}</p>
         </div>
     </div>
 </div>
