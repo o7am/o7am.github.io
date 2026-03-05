@@ -16,6 +16,7 @@ pl:
     contact: "Kontakt"
   meta:
     tagline: "o7AM: Usługi IT, Druk 3D i Inżynieria Danych"
+    alice_alt: "o7AM: Usługi IT, Druk 3D i Inżynieria Danych dla Twojego biznesu"
     index_intro_1: 'W o7AM stawiamy na kreatywne podejście i nieszablonowe rozwiązania, które zmieniają sposób myślenia o technologii 3D. Dzięki szybkiemu prototypowaniu, ekologicznym metodom oraz podejściu "fast fail, fast learn" pomagamy naszym klientom realizować projekty, które są zarówno innowacyjne, jak i efektywne.'
     index_intro_2: "Naszym celem jest dostarczanie produktów i usług, które nie tylko odpowiadają na unikalne potrzeby naszych klientów, ale także wyprzedzają ich oczekiwania."
     home_title: "o7AM |> IT | 3D | Data"
@@ -55,6 +56,8 @@ pl:
   portfolio:
     page_title: "Portfolio"
     read_more: "Czytaj więcej"
+    click_to_enlarge: "Kliknij, aby powiększyć"
+    photo_alt: "Zdjęcie"
   contact:
     page_title: "Kontakt"
     our_location: "Nasza lokalizacja"
@@ -84,6 +87,7 @@ en:
     contact: "Contact"
   meta:
     tagline: "o7AM: IT Services, 3D Printing & Data Engineering"
+    alice_alt: "o7AM: IT, 3D & Data Engineering for your business"
     index_intro_1: 'At o7AM we focus on a creative approach and unconventional solutions that change how people think about 3D technology. With rapid prototyping, sustainable methods and a "fast fail, fast learn" mindset we help our clients deliver projects that are both innovative and effective.'
     index_intro_2: "Our goal is to deliver products and services that not only meet our clients' unique needs but also exceed their expectations."
     home_title: "o7AM |> IT | 3D | Data"
@@ -123,6 +127,8 @@ en:
   portfolio:
     page_title: "Portfolio"
     read_more: "Read more"
+    click_to_enlarge: "Click to enlarge"
+    photo_alt: "Photo"
   contact:
     page_title: "Contact"
     our_location: "Our location"
