@@ -12,6 +12,25 @@
     position: relative;
 }
 
+.app-container .footer.footer--with-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.app-container .footer.footer--with-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+}
+
+.app-container .footer.footer--with-bg .footer__container {
+    position: relative;
+    z-index: 1;
+}
+
 .app-container .footer p.title-menu {
     font-family: var(--mainfont);
     font-style: normal;
