@@ -6,6 +6,10 @@
             <h1>{{ t.services.heading }}</h1>
         </div>
         <div class="services__items">
+            <a href="{{ base }}services/it.html" class="services__item services__item--it lazy-background visible" data-bg="{{ root }}assets/services/IT/cover.png" style="background-image: url(&quot;{{ root }}assets/services/IT/cover.png&quot;); position: relative; pointer-events: auto;">
+                <h3>{{ t.services.it_short }}</h3>
+                <p>{{ t.services.it_teaser }}</p>
+            </a>
             <a href="{{ base }}services/3d.html" class="services__item lazy-background visible" data-bg="{{ root }}assets/index/slider/3d.jpg" style="background-image: url(&quot;{{ root }}assets/index/slider/3d.jpg&quot;); position: relative; pointer-events: auto;">
                 <h3>{{ t.services['3d_short'] }}</h3>
                 <p>{{ t.services['3d_teaser'] }}</p>

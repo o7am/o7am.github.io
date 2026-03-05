@@ -1,5 +1,9 @@
 # Build static site with Python and deploy to GitHub Pages.
-# Runs on push to main. Enable "GitHub Actions" as the Pages source in repo Settings > Pages.
+# Runs on push to main.
+#
+# Required: In repo Settings → Pages → Build and deployment → Source,
+# choose "GitHub Actions" (not "Deploy from a branch"). Otherwise the
+# built-in "pages build and deployment (dynamic)" also runs and may fail.
 name: Build and deploy to GitHub Pages
 
 on:

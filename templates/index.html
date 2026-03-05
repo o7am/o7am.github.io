@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block main %}
+<!-- Main slider with two big images and contact info – commented out to try layout without it
 <section class="main-slider center">
     <div class="main-slider__arrows">
         <button aria-label="Poprzedni slajd" class="main-slider__arrow prev">
@@ -67,17 +68,28 @@
     </div>
     <div class="main-slider__dots"></div>
 </section>
-<section class="text-image">
+-->
+<section class="text-image text-image--top-spaced">
     <div class="text-image__container" wrapper>
         <div class="text-image__text">
-            <h2>o7AM: Druk 3D i przetwarzanie danych dla Twojego biznesu</h2>
+            <h2>{{ t.meta.tagline }}</h2>
             <div class="text-image-text-content">
-                <p>W o7AM stawiamy na kreatywne podejście i nieszablonowe rozwiązania, które zmieniają sposób myślenia o technologii 3D. Dzięki szybkiemu prototypowaniu, ekologicznym metodom oraz podejściu "fast fail, fast learn" pomagamy naszym klientom realizować projekty, które są zarówno innowacyjne, jak i efektywne.</p>
-                <p>Naszym celem jest dostarczanie produktów i usług, które nie tylko odpowiadają na unikalne potrzeby naszych klientów, ale także wyprzedzają ich oczekiwania.</p>
+                <p>{{ t.meta.index_intro_1 }}</p>
+                <p>{{ t.meta.index_intro_2 }}</p>
             </div>
         </div>
         <div class="text-image__image">
             <img loading="lazy" src="{{ root }}assets/o7am/alice.png" alt="o7AM: 3D_DE_ML dla Twojego biznesu">
+        </div>
+    </div>
+</section>
+<section class="cta-block left cta-block--it" style="position: relative; pointer-events: auto;">
+    <div class="cta-block__image lazy-background visible" data-bg="{{ root }}assets/services/IT/cover.png" style="background-image: url(&quot;{{ root }}assets/services/IT/cover.png&quot;);"></div>
+    <div class="cta-block__container">
+        <div class="cta-block__text">
+            <h2>{{ t.services.it_short }}</h2>
+            <p>{{ t.services.it_cta }}</p>
+            <a class="button-border" href="{{ base }}services/it.html">(╯°□°)╯︵ ┻━┻</a>
         </div>
     </div>
 </section>
@@ -86,7 +98,7 @@
     <div class="cta-block__container">
         <div class="cta-block__text">
             <h2>{{ t.services['3d_short'] }}</h2>
-            <p>Oferujemy profesjonalne drukowanie elementów 3D na zamówienie, dostosowane do indywidualnych potrzeb klienta. Wysoka jakość i terminowość.</p>
+            <p>{{ t.services['3d_cta'] }}</p>
             <a class="button-border" href="{{ base }}services/3d.html">(｡◕‿◕｡)</a>
         </div>
     </div>
@@ -97,7 +109,7 @@
     <div class="cta-block__container">
         <div class="cta-block__text">
             <h2>{{ t.services.de_short }}</h2>
-            <p>Specjalizujemy się w kompleksowym przetwarzaniu danych oraz inżynierii danych, oferując rozwiązania dopasowane do specyficznych potrzeb biznesowych.</p>
+            <p>{{ t.services.de_cta }}</p>
             <a class="button-border" href="{{ base }}services/de.html">ヽ(´ー｀)ノ</a>
         </div>
     </div>
