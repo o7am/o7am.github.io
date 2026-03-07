@@ -61,8 +61,8 @@ def main():
         prefix = "" if loc == "pl" else "en/"
         t = data["i18n"][loc]
 
-        # Index
-        pages.append((f"{prefix}index.html", "index.html", {"title": t["meta"]["home_title"], "description": t["meta"]["home_description"], "canonical_path": f"{prefix.rstrip('/') or ''}", "body_class": "front-page"}))
+        # Index (preload LCP image for performance)
+        pages.append((f"{prefix}index.html", "index.html", {"title": t["meta"]["home_title"], "description": t["meta"]["home_description"], "canonical_path": f"{prefix.rstrip('/') or ''}", "body_class": "front-page", "preload_lcp": True}))
         # Blog list
         pages.append((f"{prefix}blog.html", "blog.html", {"title": t["meta"]["blog_title"], "description": t["meta"]["blog_description"], "canonical_path": f"{prefix}blog.html", "blogs": data["blogs"]}))
         # Portfolio list
