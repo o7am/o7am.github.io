@@ -80,7 +80,7 @@ Jinja2 templates. The build passes a shared context: `base` (path to **locale ro
 | `base.html` | Layout: `partials/head.html`, header, `{% block main %}`, CTA, footer; loads `app.js`. |
 | `partials/head.html` | Meta, title, description, Open Graph, Twitter, theme, CSS (`root`), canonical, hreflang. |
 | `partials/header.html` | Logo, nav (services submenu, portfolio, blog), language switcher, contact button. Uses `base` for in-locale links, `t.nav.*`, `other_lang_href`. |
-| `partials/footer.html` | Footer content and links. |
+| `partials/footer.html` | Footer content and links. Includes Ko-fi support link in the socials row (first icon); same footer is injected into static portfolio pages at build time. |
 | `partials/cta.html` | CTA block (e.g. “o7AM” branding). |
 | `index.html` | Homepage. |
 | `blog.html` | Blog listing; receives `blogs`. |
@@ -107,6 +107,12 @@ Hand-written HTML that **replaces** some generated portfolio pages:
 
 The build still generates `portfolios/emoji.html` and `en/portfolios/emoji.html` from data, then overwrites them with these files if present. Other portfolio slugs (e.g. `3d_prints`) are only generated from `portfolios.yaml` and `portfolio_item.html`.
 
+### `scripts/`
+
+| Script | Purpose |
+|--------|--------|
+| `scripts/sync-en-from-pl.py` | **PL/EN sync check.** Compares Polish vs English content in `data/i18n.yaml`, `data/blogs.yaml`, and `data/portfolios.yaml`. Reports: keys present in PL but missing in EN; EN values identical to PL (likely untranslated). Run: `just sync-en` or `uv run python scripts/sync-en-from-pl.py`. Use `--format json` for machine output; use `--suggest` to print suggested EN snippets (copy from PL) for manual translation. See [PL/EN sync command](#plen-sync-command) below. |
+
 ### `docs/`
 
 Design and planning docs (e.g. `docs/plans/`). Not used by the build; for humans/agents.
@@ -131,6 +137,23 @@ Design and planning docs (e.g. `docs/plans/`). Not used by the build; for humans
 - **Portfolio items:** Add or edit entries in `data/portfolios.yaml`. Use `body.pl` / `body.en` for HTML description. To use a **custom page** instead of the generic template, add the slug to `STATIC_PORTFOLIOS` in `build.py` and add the corresponding `portfolios/<slug>.html` and `en/portfolios/<slug>.html` files.
 - **New pages (e.g. new service):** Add a new template, then in `build.py` extend the `pages` list (per locale) with the correct output path, template name, and context.
 
+### Theme-aware styling (light/dark)
+
+The site supports a light/dark theme (`data-theme="light"` or `"dark"` on `<html>`). **Any new or changed text and UI must be theme-oriented:** use CSS variables (e.g. `var(--text-primary)`, `var(--bg-page)`, `var(--header-text)`) instead of hardcoded colors like `#fff` or `#000`. That way new copy, borders, and backgrounds respect the user’s theme. See `style.css` for the existing theme variables and `[data-theme="light"]` overrides.
+
+### Support link (Ko-fi)
+
+A “support us” / “buy me a coffee” link points to Ko-fi (`https://ko-fi.com/o7am_`). It appears in the **footer** as the first social icon (same style as Instagram/LinkedIn) and on the **contact page** as a green round button with a coffee icon. Copy: `footer.support_us`, `contact.support_line`, `contact.support_cta` in `data/i18n.yaml`. No backend; link-only.
+
+### PL/EN sync command
+
+To check whether English content is in sync with Polish (e.g. after adding new copy in PL):
+
+- **Run:** `just sync-en` or `uv run python scripts/sync-en-from-pl.py` (from repo root).
+- **Output:** A report listing (1) keys present in PL but missing in EN (`data/i18n.yaml`), and (2) EN values that are identical to PL (often intentional e.g. "Portfolio", "Data Engineering"; review and translate if not).
+- **Options:** `--format json` for machine-readable output; `--suggest` to print suggested EN snippets (copy from PL) for missing or identical i18n keys, for manual translation.
+- **When to run:** After editing `data/i18n.yaml`, `data/blogs.yaml`, or `data/portfolios.yaml`; before committing large content changes; when preparing a release.
+
 ---
 
 ## Static files
@@ -144,7 +167,7 @@ These are copied from the repo root into `out/` during build (see `STATIC_FILES`
 
 ## Static portfolio overrides
 
-Slugs listed in `STATIC_PORTFOLIOS` in `build.py` (e.g. `emoji`) get their generated `portfolios/<slug>.html` and `en/portfolios/<slug>.html` overwritten by the files in the repo under `portfolios/` and `en/portfolios/` if those files exist. Use this for pages that need custom layout or script (e.g. the emoji grid) instead of the generic portfolio template.
+Slugs listed in `STATIC_PORTFOLIOS` in `build.py` (e.g. `emoji`) get their generated `portfolios/<slug>.html` and `en/portfolios/<slug>.html` overwritten by the files in the repo under `portfolios/` and `en/portfolios/` if those files exist. Use this for pages that need custom layout or script (e.g. the emoji grid) instead of the generic portfolio template. The build **injects the shared footer partial** (from `templates/partials/footer.html`) into these static files by replacing `<!-- FOOTER_PARTIAL -->` with the rendered footer, so the Ko-fi link and other footer content stay in sync without duplicating markup.
 
 ---
 
@@ -162,5 +185,8 @@ Slugs listed in `STATIC_PORTFOLIOS` in `build.py` (e.g. `emoji`) get their gener
 1. **Build:** Run `just build` or `uv run python build.py`; output is in `out/`.
 2. **Content:** Edit YAML in `data/`; templates in `templates/` consume it.
 3. **Deploy:** Push to `main`; the workflow builds and deploys `out/` to GitHub Pages.
-4. **Custom portfolio pages:** Add HTML under `portfolios/` and `en/portfolios/`, and add the slug to `STATIC_PORTFOLIOS` in `build.py`.
+4. **Custom portfolio pages:** Add HTML under `portfolios/` and `en/portfolios/`, and add the slug to `STATIC_PORTFOLIOS` in `build.py`. Use `<!-- FOOTER_PARTIAL -->` where the footer should go; the build injects the shared footer (including Ko-fi) there.
 5. **New static assets:** Put them in `assets/` or add to `STATIC_FILES` if at root; they will be copied into `out/` on build.
+6. **Theme-aware UI:** Any new or changed text/UI must use CSS variables (e.g. `var(--text-primary)`) so it works in both light and dark theme; avoid hardcoded colors.
+7. **Support link:** Ko-fi lives in the footer (first social icon) and on the contact page (green coffee button); copy in i18n (`footer.support_us`, `contact.support_*`).
+8. **PL/EN sync:** After editing `data/i18n.yaml`, `data/blogs.yaml`, or `data/portfolios.yaml`, run `just sync-en` (or `uv run python scripts/sync-en-from-pl.py`) to see if EN is missing keys or still has copy identical to PL (needs translation).

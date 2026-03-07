@@ -65,9 +65,12 @@ pl:
     write_us: "Napisz do nas"
     address_line1: "Dojazdowa"
     address_line2: "Radzyny 64-530"
+    support_line: "Podoba Ci się to, co robimy? Kup nam kawę."
+    support_cta: "Kup mi kawę"
   footer:
     contact: "Kontakt"
     services: "Usługi"
+    support_us: "Kup mi kawę"
     copyright: "o7AM © Wszelkie prawa zastrzeżone"
 
 en:
@@ -136,7 +139,10 @@ en:
     write_us: "Email us"
     address_line1: "Dojazdowa"
     address_line2: "Radzyny 64-530"
+    support_line: "Like what we do? Buy us a coffee."
+    support_cta: "Buy me a coffee"
   footer:
     contact: "Contact"
     services: "Services"
+    support_us: "Buy me a coffee"
     copyright: "o7AM © All rights reserved"

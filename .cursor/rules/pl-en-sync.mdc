@@ -1,0 +1,21 @@
+---
+description: When editing PL/EN content, run the sync script to check EN is in sync
+globs: data/*.yaml
+alwaysApply: false
+---
+
+# PL/EN content sync
+
+When you add or change Polish copy in `data/i18n.yaml`, `data/blogs.yaml`, or `data/portfolios.yaml`, ensure English is updated too.
+
+**Before finishing:** Run the PL/EN sync report from repo root:
+
+```bash
+just sync-en
+# or: uv run python scripts/sync-en-from-pl.py
+```
+
+- **Missing in EN:** Keys or fields present in PL but missing in EN need to be added (and translated).
+- **Identical to PL:** EN values that match PL are flagged; some are intentional (e.g. "Portfolio", "Data Engineering"). Review and translate if the EN version should differ.
+
+Use `--suggest` to get suggested EN snippets (copy from PL) for manual translation. See AGENTS.md § PL/EN sync command.
