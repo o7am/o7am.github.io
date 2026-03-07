@@ -2,6 +2,12 @@
     <div class="header__container">
         <a href="{{ base }}index.html" class="header__logo">o<span class="header__logo-accent">7</span>AM</a>
         <div class="header__menu ">
+            <nav class="theme-toggle" aria-label="Theme">
+                <button type="button" class="theme-toggle__icon-btn" data-theme-toggle aria-label="Toggle theme" title="Toggle theme">
+                    <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+                    <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+                </button>
+            </nav>
             <ul class="header__menu-list">
                 <li class="header__menu-item has-children">
                     <a href="{{ base }}services.html">{{ t.nav.services }}</a>

@@ -10,3 +10,7 @@ build:
 # Preview built site locally (serve out/ on port 8000)
 serve:
     uv run python -m http.server 8000 --directory out
+
+# Compare PL vs EN content in data/*.yaml (missing EN keys, EN identical to PL)
+sync-en:
+    uv run python scripts/sync-en-from-pl.py

@@ -12,7 +12,7 @@ SITE_URL = "https://o7.am"
 OUT_DIR = Path("out")
 DATA_DIR = Path("data")
 TEMPLATES_DIR = Path("templates")
-STATIC_FILES = ["style.css", "app.js", "CNAME", "robots.txt", "sitemap.xml", "llms.txt"]
+STATIC_FILES = ["style.css", "app.js", "theme.js", "CNAME", "robots.txt", "sitemap.xml", "llms.txt"]
 STATIC_DIRS = ["assets"]
 
 
@@ -34,9 +34,8 @@ def locale_base_prefix(rel_path):
 
 
 def root_prefix(rel_path):
-    """Path from output file's directory to site root (for static assets: CSS, JS, assets/)."""
-    depth = len(Path(rel_path).parent.parts)
-    return "../" * depth if depth else ""
+    """Path to site root for static assets (CSS, JS, assets/). Use root-relative so EN and all subpaths load the same assets."""
+    return "/"
 
 
 def main():
@@ -132,13 +131,27 @@ def main():
                 shutil.rmtree(dest)
             shutil.copytree(src, dest)
 
-    # Overwrite generated portfolio item pages with static custom pages (e.g. emoji grid)
+    # Overwrite generated portfolio item pages with static custom pages (e.g. emoji grid).
+    # Inject the shared footer partial so Ko-fi and other footer changes stay in sync.
+    FOOTER_MARKER = "<!-- FOOTER_PARTIAL -->"
+    footer_tmpl = env.get_template("partials/footer.html")
     STATIC_PORTFOLIOS = ["emoji"]
     for slug in STATIC_PORTFOLIOS:
         for rel_path in (f"portfolios/{slug}.html", f"en/portfolios/{slug}.html"):
             src = root / rel_path
-            if src.exists():
+            if not src.exists():
+                continue
+            base = locale_base_prefix(rel_path)
+            root_url = root_prefix(rel_path)
+            locale = "en" if rel_path.startswith("en/") else "pl"
+            t = data["i18n"][locale]
+            footer_html = footer_tmpl.render(base=base, root=root_url, t=t)
+            content = src.read_text(encoding="utf-8")
+            if FOOTER_MARKER not in content:
                 shutil.copy2(src, out / rel_path)
+                continue
+            content = content.replace(FOOTER_MARKER, footer_html)
+            (out / rel_path).write_text(content, encoding="utf-8")
 
     # Redirect /en.html to EN homepage (GitHub Pages doesn't serve /en as directory index)
     (out / "en.html").write_text(
