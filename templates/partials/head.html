@@ -23,8 +23,13 @@
 (function(){var t=localStorage.getItem("o7am-theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark");})();
 </script>
 <link rel="icon" type="image/svg+xml" href="{{ root }}assets/favicon.svg" />
+{% if preload_lcp | default(false) %}
+<link rel="preload" as="image" href="{{ root }}assets/o7am/logo_wide.jpg" />
+{% endif %}
 <link href="{{ root }}style.css" rel="stylesheet" />
-<link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet" />
+<link rel="preconnect" href="https://code.cdn.mozilla.net" />
+<link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css" /></noscript>
 <meta property="og:image" content="https://o7.am/assets/o7am/logo_wide.jpg" />
 <meta name="twitter:image" content="https://o7.am/assets/o7am/logo_wide.jpg" />
 <link rel="canonical" href="{{ canonical_url }}" />

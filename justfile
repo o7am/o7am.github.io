@@ -14,3 +14,7 @@ serve:
 # Compare PL vs EN content in data/*.yaml (missing EN keys, EN identical to PL)
 sync-en:
     uv run python scripts/sync-en-from-pl.py
+
+# Run Lighthouse performance audit against live https://o7.am (requires Chrome and Node/npx)
+perf:
+    uv run python scripts/run-performance-audit.py
