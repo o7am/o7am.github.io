@@ -6915,7 +6915,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-Black.woff2)
+    src: url(assets/fonts/FiraSans-Black.woff2)
         format("woff2");
     font-weight: 900;
     font-style: normal;
@@ -6924,7 +6924,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-BlackItalic.woff2)
+    src: url(assets/fonts/FiraSans-BlackItalic.woff2)
         format("woff2");
     font-weight: 900;
     font-style: italic;
@@ -6933,7 +6933,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-Bold.woff2)
+    src: url(assets/fonts/FiraSans-Bold.woff2)
         format("woff2");
     font-weight: 700;
     font-style: normal;
@@ -6942,7 +6942,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-BoldItalic.woff2)
+    src: url(assets/fonts/FiraSans-BoldItalic.woff2)
         format("woff2");
     font-weight: 700;
     font-style: italic;
@@ -6951,7 +6951,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-ExtraBold.woff2)
+    src: url(assets/fonts/FiraSans-ExtraBold.woff2)
         format("woff2");
     font-weight: 800;
     font-style: normal;
@@ -6960,7 +6960,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-ExtraBoldItalic.woff2)
+    src: url(assets/fonts/FiraSans-ExtraBoldItalic.woff2)
         format("woff2");
     font-weight: 800;
     font-style: italic;
@@ -6969,7 +6969,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-ExtraLight.woff2)
+    src: url(assets/fonts/FiraSans-ExtraLight.woff2)
         format("woff2");
     font-weight: 200;
     font-style: normal;
@@ -6978,7 +6978,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-ExtraLightItalic.woff2)
+    src: url(assets/fonts/FiraSans-ExtraLightItalic.woff2)
         format("woff2");
     font-weight: 200;
     font-style: italic;
@@ -6987,7 +6987,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-Italic.woff2)
+    src: url(assets/fonts/FiraSans-Italic.woff2)
         format("woff2");
     font-weight: 400;
     font-style: italic;
@@ -6996,7 +6996,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-Light.woff2)
+    src: url(assets/fonts/FiraSans-Light.woff2)
         format("woff2");
     font-weight: 300;
     font-style: normal;
@@ -7005,7 +7005,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-LightItalic.woff2)
+    src: url(assets/fonts/FiraSans-LightItalic.woff2)
         format("woff2");
     font-weight: 300;
     font-style: italic;
@@ -7014,7 +7014,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-Medium.woff2)
+    src: url(assets/fonts/FiraSans-Medium.woff2)
         format("woff2");
     font-weight: 500;
     font-style: normal;
@@ -7023,7 +7023,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-MediumItalic.woff2)
+    src: url(assets/fonts/FiraSans-MediumItalic.woff2)
         format("woff2");
     font-weight: 500;
     font-style: italic;
@@ -7032,7 +7032,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-Regular.woff2)
+    src: url(assets/fonts/FiraSans-Regular.woff2)
         format("woff2");
     font-weight: 400;
     font-style: normal;
@@ -7041,7 +7041,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-SemiBold.woff2)
+    src: url(assets/fonts/FiraSans-SemiBold.woff2)
         format("woff2");
     font-weight: 600;
     font-style: normal;
@@ -7050,7 +7050,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-SemiBoldItalic.woff2)
+    src: url(assets/fonts/FiraSans-SemiBoldItalic.woff2)
         format("woff2");
     font-weight: 600;
     font-style: italic;
@@ -7059,7 +7059,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-Thin.woff2)
+    src: url(assets/fonts/FiraSans-Thin.woff2)
         format("woff2");
     font-weight: 100;
     font-style: normal;
@@ -7068,7 +7068,7 @@
 
 @font-face {
     font-family: "Fira Sans";
-    src: url(https://static.cyberfolks.com/static/fonts/Fira_Sans/FiraSans-ThinItalic.woff2)
+    src: url(assets/fonts/FiraSans-ThinItalic.woff2)
         format("woff2");
     font-weight: 100;
     font-style: italic;
@@ -7077,7 +7077,7 @@
 
 @font-face {
     font-family: Oswald;
-    src: url(https://static.cyberfolks.com/static/fonts/Oswald/Oswald-Bold.woff2)
+    src: url(assets/fonts/Oswald-Bold.woff2)
         format("woff2");
     font-weight: 700;
     font-style: normal;
@@ -7086,7 +7086,7 @@
 
 @font-face {
     font-family: Oswald;
-    src: url(https://static.cyberfolks.com/static/fonts/Oswald/Oswald-ExtraLight.woff2)
+    src: url(assets/fonts/Oswald-ExtraLight.woff2)
         format("woff2");
     font-weight: 200;
     font-style: normal;
@@ -7095,7 +7095,7 @@
 
 @font-face {
     font-family: Oswald;
-    src: url(https://static.cyberfolks.com/static/fonts/Oswald/Oswald-Light.woff2)
+    src: url(assets/fonts/Oswald-Light.woff2)
         format("woff2");
     font-weight: 300;
     font-style: normal;
@@ -7104,7 +7104,7 @@
 
 @font-face {
     font-family: Oswald;
-    src: url(https://static.cyberfolks.com/static/fonts/Oswald/Oswald-Medium.woff2)
+    src: url(assets/fonts/Oswald-Medium.woff2)
         format("woff2");
     font-weight: 500;
     font-style: normal;
@@ -7113,7 +7113,7 @@
 
 @font-face {
     font-family: Oswald;
-    src: url(https://static.cyberfolks.com/static/fonts/Oswald/Oswald-Regular.woff2)
+    src: url(assets/fonts/Oswald-Regular.woff2)
         format("woff2");
     font-weight: 400;
     font-style: normal;
@@ -7122,7 +7122,7 @@
 
 @font-face {
     font-family: Oswald;
-    src: url(https://static.cyberfolks.com/static/fonts/Oswald/Oswald-SemiBold.woff2)
+    src: url(assets/fonts/Oswald-SemiBold.woff2)
         format("woff2");
     font-weight: 600;
     font-style: normal;
