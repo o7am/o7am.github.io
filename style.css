@@ -5740,6 +5740,14 @@
     }
 }
 
+@media (max-width: 768px) {
+    .app-container .blog-archive__item-image {
+        aspect-ratio: 1;
+        min-height: 0;
+        height: auto;
+    }
+}
+
 .app-container .blog-archive__item-image img {
     width: 100%;
     height: 100%;

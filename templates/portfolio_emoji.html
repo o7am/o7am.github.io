@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block main %}
+<div style="position: relative; pointer-events: auto;" class="">
+    <section class="page-header">
+        <h1>{{ item.title[locale] }}</h1>
+    </section>
+    {% include 'partials/portfolio_emoji_content.html' %}
+</div>
+{% endblock %}
