@@ -8011,6 +8011,31 @@ body.single-page {
     color: var(--primarycolor);
 }
 
+.app-container .emoji-copy-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 12px 20px;
+    background: var(--tooltip-bg);
+    border: 1px solid var(--primarycolor);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    font-family: var(--mainfont);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primarycolor);
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.app-container .emoji-copy-toast.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* --- Theme toggle (bright/dark) --- */
 .theme-toggle {
     display: flex;
