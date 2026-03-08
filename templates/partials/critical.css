@@ -16,3 +16,17 @@ body.single-page{padding-top:112px;}
 .app-container .header__container{display:flex;justify-content:space-between;align-items:center;max-width:1860px;padding:0 100px;margin-left:auto;margin-right:auto;}
 @media (max-width:1500px){.app-container .header__container{padding:0 50px;}}
 @media (max-width:1000px){.app-container .header__container{padding:12px 16px;}.app-container .header.square .header__container{padding:5px 16px;}.app-container .header.square .header__menu{top:80px;}}
+/* Hero above-the-fold: first .text-image section (LCP) so it doesn't wait for full style.css */
+.app-container .text-image.text-image--top-spaced{padding-top:64px;}
+.app-container .text-image__container{width:100%;max-width:1800px;padding:90px 100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;}
+.app-container .text-image__container.wrapper .text-image__text{width:51.3%;}
+.app-container .text-image__container.wrapper .text-image__image{width:43.9%;position:relative;}
+.app-container .text-image__container.wrapper .text-image__image img{width:100%;object-fit:cover;position:relative;}
+.app-container .text-image__image{width:42.3%;position:relative;min-height:380px;display:flex;flex-direction:column;}
+.app-container .text-image__image img{width:50vw;object-fit:cover;height:100%;position:absolute;}
+.app-container .text-image__image--alice{overflow:visible;}
+.app-container .text-image__image--alice img{border-radius:12px;display:block;}
+@media (max-width:1200px){.app-container .text-image__container{padding:60px 50px;}}
+@media (max-width:1100px){.app-container .text-image__container.wrapper .text-image__text{width:100%;}.app-container .text-image__container.wrapper .text-image__image{width:100%;}.app-container .text-image__image{width:100%;}.app-container .text-image__image img{width:100%;position:relative;height:300px;}}
+@media (max-width:1000px){.app-container .text-image__container{padding:48px 16px;}}
+@media (max-width:768px){.app-container .text-image.text-image--top-spaced{padding-top:48px;}}
