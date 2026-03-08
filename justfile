@@ -15,7 +15,8 @@ serve:
 sync-en:
     uv run python scripts/sync-en-from-pl.py
 
-# Run Lighthouse performance audit against live https://www.o7.am (requires Chrome and Node/npx)
+# Run Lighthouse performance audit against live https://www.o7.am (requires Chrome and Node/npx).
+# By default runs each URL 3 times and reports the median run (stable). Use PERF_RUNS=5 for more runs, or add --single for one run.
 perf:
     uv run python scripts/run-performance-audit.py
 
