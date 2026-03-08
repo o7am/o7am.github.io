@@ -1,0 +1,18 @@
+/* Critical above-the-fold CSS: variables, layout, header. Full stylesheet loads async. */
+*{padding:0;box-sizing:border-box;margin:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+:root{--mainfont:'Fira Sans',sans-serif;--darkcolor:#271E1E;--primarycolor:#008776;--bg-page:#0a0a0a;--bg-surface:#181b1f;--text-primary:#fff;--text-secondary:#ccc;--header-bg:#030303;--header-bg-gradient:linear-gradient(180deg,#030303 0,rgba(0,0,0,0) 100%);--header-text:#fff;--header-menu-bg:rgba(0,0,0,0.898);--header-sticky-bg:rgba(0,0,0,0.85);--submenu-bg:rgba(0,0,0,0.897);--submenu-border:#fff;--card-bg:#1a1d21;--card-border:#2d3238;--tooltip-bg:#271E1E;}
+[data-theme="light"]{--bg-page:#efeae2;--bg-surface:#e5dfd6;--text-primary:#271E1E;--text-secondary:#555;--header-bg:#efeae2;--header-bg-gradient:linear-gradient(180deg,#efeae2 0,rgba(239,234,226,0) 100%);--header-text:#271E1E;--header-menu-bg:rgba(239,234,226,0.98);--header-sticky-bg:rgba(239,234,226,0.95);--submenu-bg:rgba(239,234,226,0.98);--submenu-border:#271E1E;--card-bg:#f5f1eb;--card-border:#d4cdc2;--tooltip-bg:#e5dfd6;}
+body{max-width:100vw;overflow-x:hidden;position:relative;font-family:var(--mainfont);background-color:var(--bg-page);color:var(--text-primary);transition:background-color .25s ease,color .25s ease;}
+body.single-page{padding-top:112px;}
+@media (max-width:1000px){body.single-page{padding-top:65px;}}
+.app-container{overflow:hidden;position:relative;max-width:100vw;color:var(--text-primary);}
+.app-container .header{position:fixed;left:0;top:0;width:100%;transition:.3s;z-index:999;}
+.app-container .header::after{content:"";background:var(--header-bg);background:var(--header-bg-gradient);height:200px;width:100%;position:absolute;left:0;top:0;transition:.3s;z-index:-1;}
+@media (max-width:1000px){.app-container .header::after{height:80px;}.app-container .header.open{background-color:var(--header-menu-bg);}}
+@media (min-width:1000px){.app-container .header:hover{background-color:var(--header-menu-bg);}}
+.app-container .header.sticky{background-color:var(--header-sticky-bg);}
+.app-container .header.sticky::after{opacity:0;}
+.app-container .header__container{display:flex;justify-content:space-between;align-items:center;max-width:1860px;padding:0 100px;margin-left:auto;margin-right:auto;}
+@media (max-width:1500px){.app-container .header__container{padding:0 50px;}}
+@media (max-width:1000px){.app-container .header__container{padding:12px 16px;}.app-container .header.square .header__container{padding:5px 16px;}.app-container .header.square .header__menu{top:80px;}}
