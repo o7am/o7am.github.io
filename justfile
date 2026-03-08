@@ -15,6 +15,10 @@ serve:
 sync-en:
     uv run python scripts/sync-en-from-pl.py
 
-# Run Lighthouse performance audit against live https://o7.am (requires Chrome and Node/npx)
+# Run Lighthouse performance audit against live https://www.o7.am (requires Chrome and Node/npx)
 perf:
     uv run python scripts/run-performance-audit.py
+
+# Download Fira Sans and Oswald fonts into assets/fonts/ (run once or when updating fonts)
+fonts:
+    uv run python scripts/download-fonts.py
