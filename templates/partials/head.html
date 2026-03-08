@@ -30,8 +30,9 @@
 (function(){var t=localStorage.getItem("o7am-theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark");})();
 </script>
 <link rel="icon" type="image/svg+xml" href="{{ root }}assets/favicon.svg" />
+<link rel="preconnect" href="https://region1.google-analytics.com" crossorigin />
 {% if preload_lcp | default(false) %}
-<link rel="preload" as="image" href="{{ root }}assets/o7am/logo_wide.jpg" />
+<link rel="preload" as="image" href="{{ root }}assets/o7am/alice.png" />
 {% endif %}
 <link rel="preload" href="{{ root }}assets/fonts/FiraSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="{{ root }}style.css" media="print" onload="this.media='all'" />
