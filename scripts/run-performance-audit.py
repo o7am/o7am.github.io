@@ -14,7 +14,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = REPO_ROOT / "docs"
-LIVE_BASE = "https://o7.am"
+# Use www so Lighthouse doesn't count the o7.am → www redirect (~1s penalty)
+LIVE_BASE = "https://www.o7.am"
 
 # Pages to audit: (label, path)
 PAGES = [
@@ -93,6 +94,7 @@ def write_report(results: list[tuple[str, str, dict | None]], report_path: Path)
         "",
         f"**Base URL:** {LIVE_BASE}",
         "**Tool:** Lighthouse (CLI), performance category only.",
+        "*(Audit uses www so the o7.am→www redirect is not counted.)*",
         "",
         "## Results",
         "",
