@@ -105,6 +105,7 @@
                             <div class="emoji-item"><div class="emoji-cell"><span class="emoji-text">(๑•̀ㅂ•́)و✧</span></div><div class="emoji-desc">determined</div></div>
                         </div>
                         </div>
+                        <div id="emoji-copy-toast" class="emoji-copy-toast" aria-live="polite" aria-hidden="true">Copied!</div>
                     </div>
                 </div>
 
@@ -154,12 +155,27 @@
         });
     }
 
+    var toast = document.getElementById('emoji-copy-toast');
+    var toastHideTimeout;
+
+    function showCopyToast() {
+        if (!toast) return;
+        if (toastHideTimeout) clearTimeout(toastHideTimeout);
+        toast.classList.add('is-visible');
+        toast.setAttribute('aria-hidden', 'false');
+        toastHideTimeout = setTimeout(function() {
+            toast.classList.remove('is-visible');
+            toast.setAttribute('aria-hidden', 'true');
+            toastHideTimeout = null;
+        }, 2000);
+    }
+
     grid.querySelectorAll('.emoji-cell').forEach(function(cell) {
         cell.addEventListener('click', function(e) {
             var text = (cell.querySelector('.emoji-text') || cell).textContent.trim();
             if (!text) return;
             e.preventDefault();
-            navigator.clipboard.writeText(text).catch(function() {});
+            navigator.clipboard.writeText(text).then(showCopyToast).catch(function() {});
         });
     });
 })();
