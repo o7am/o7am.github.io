@@ -71,6 +71,7 @@ pl:
     contact: "Kontakt"
     services: "Usługi"
     support_us: "Kup mi kawę"
+    nip: "NIP: 782-247-82-11"
     copyright: "o7AM © Wszelkie prawa zastrzeżone"
 
 en:
@@ -145,4 +146,5 @@ en:
     contact: "Contact"
     services: "Services"
     support_us: "Buy me a coffee"
+    nip: "NIP: 782-247-82-11"
     copyright: "o7AM © All rights reserved"
