@@ -212,81 +212,24 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".email-form").forEach(function (e) {
         e.addEventListener("submit", sendEmailAjax)
     })
-}),
-    document.addEventListener("DOMContentLoaded", function () {
-        var r, e = [].slice.call(document.querySelectorAll(".lazy-background"));
-        "IntersectionObserver" in window && (r = new IntersectionObserver(function (e, t) {
-            e.forEach(function (e) {
-                var t;
-                e.isIntersecting && (t = e.target.getAttribute("data-bg"),
-                    e.target.style.backgroundImage = "url('" + t + "')",
-                    e.target.classList.add("visible"),
-                    r.unobserve(e.target))
-            })
-        }
-        ),
-            e.forEach(function (e) {
-                r.observe(e)
-            }))
-    }),
-    document.getElementById("cookie-banner") && (setCookie = function (e, t, r) {
-        var n = new Date
-            , r = (n.setTime(n.getTime() + 24 * r * 60 * 60 * 1e3),
-                "expires=" + n.toUTCString());
-        document.cookie = e + "=" + t + ";" + r + ";path=/"
+});
+document.addEventListener("DOMContentLoaded", function () {
+    var r, e = [].slice.call(document.querySelectorAll(".lazy-background"));
+    "IntersectionObserver" in window && (r = new IntersectionObserver(function (e, t) {
+        e.forEach(function (e) {
+            var t;
+            e.isIntersecting && (t = e.target.getAttribute("data-bg"),
+                e.target.style.backgroundImage = "url('" + t + "')",
+                e.target.classList.add("visible"),
+                r.unobserve(e.target))
+        })
     }
-        ,
-        getCookie = function (e) {
-            e = ("; " + document.cookie).split("; " + e + "=");
-            if (2 == e.length)
-                return e.pop().split(";").shift()
-        }
-        ,
-        acceptCookies = function () {
-            setCookie("cookiesAccepted", "yes", 365),
-                document.getElementById("cookie-banner").style.display = "none",
-                "function" == typeof gtag && gtag("consent", "update", {
-                    ad_storage: "granted",
-                    analytics_storage: "granted",
-                    ad_user_data: "granted",
-                    ad_personalization: "granted"
-                })
-        }
-        ,
-        cookieBannerDisplayed = !(rejectCookies = function () {
-            setCookie("cookiesAccepted", "no", 365),
-                document.getElementById("cookie-banner").style.display = "none",
-                "function" == typeof gtag && gtag("consent", "update", {
-                    ad_storage: "denied",
-                    analytics_storage: "denied",
-                    ad_user_data: "denied",
-                    ad_personalization: "denied"
-                })
-        }
-        ),
-        window.addEventListener("scroll", function () {
-            var e = window.scrollY || document.documentElement.scrollTop
-                , t = getCookie("cookiesAccepted");
-            100 < e && !cookieBannerDisplayed && !t && (document.getElementById("cookie-banner").style.display = "flex",
-                cookieBannerDisplayed = !0)
-        }),
-        window.onload = function () {
-            var e = getCookie("cookiesAccepted");
-            e ? "yes" === e ? gtag("consent", "update", {
-                ad_storage: "granted",
-                analytics_storage: "granted",
-                ad_user_data: "granted",
-                ad_personalization: "granted"
-            }) : "no" === e && gtag("consent", "update", {
-                ad_storage: "denied",
-                analytics_storage: "denied",
-                ad_user_data: "denied",
-                ad_personalization: "denied"
-            }) : document.getElementById("cookie-banner").style.display = "flex"
-        }
-    );
-    var setCookie, getCookie, acceptCookies, rejectCookies, cookieBannerDisplayed, 
-    menuBtn = document.querySelector(".header__ham"), 
+    ),
+        e.forEach(function (e) {
+            r.observe(e)
+        }))
+});
+    var menuBtn = document.querySelector(".header__ham"),
     mainMenu = document.querySelector(".header__menu"), 
     header = document.querySelector(".header"),
     appContainer = (

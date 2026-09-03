@@ -1,16 +1,5 @@
-<!-- Google tag (gtag.js) - config deferred until after first paint -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ5Y48KL7B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  function runGtagConfig(){gtag('config', 'G-KJ5Y48KL7B');}
-  if (typeof requestIdleCallback === 'function') {
-    requestIdleCallback(function(){runGtagConfig();},{timeout:3000});
-  } else {
-    setTimeout(runGtagConfig, 2500);
-  }
-</script>
+<!-- Cloudflare Web Analytics: cookieless, no personal data collected, no consent banner required. -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ca5eff4f60140faa76c948018c26ac8"}'></script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="IE=edge" http-equiv="X-UA-Compatible" />
@@ -30,7 +19,6 @@
 (function(){var t=localStorage.getItem("o7am-theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark");})();
 </script>
 <link rel="icon" type="image/svg+xml" href="{{ root }}assets/favicon.svg" />
-<link rel="preconnect" href="https://region1.google-analytics.com" crossorigin />
 {% if preload_lcp | default(false) %}
 <link rel="preload" as="image" href="{{ root }}assets/o7am/alice.png" />
 {% endif %}
