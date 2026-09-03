@@ -26,16 +26,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Install uv (and Python)
+        uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.12"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+          enable-cache: true
 
       - name: Build site
-        run: python build.py
+        run: uv run python build.py
 
       - name: Setup Pages
         id: pages

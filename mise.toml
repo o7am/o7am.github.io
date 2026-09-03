@@ -1,0 +1,12 @@
+[tools]
+# Runtime for build.py
+python = "3.12"
+# Package/venv manager used by justfile (`uv run ...`)
+uv = "latest"
+# Task runner (see justfile)
+just = "latest"
+# Only needed for `just perf` (Lighthouse audit via npx); optional for day-to-day work
+node = "lts"
+
+[settings]
+experimental = true
