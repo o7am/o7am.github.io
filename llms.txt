@@ -12,6 +12,7 @@
 
 ## Services
 
+- [IT Support](https://o7.am/services/it.html): Workstation and network setup, system maintenance, remote and on-site support.
 - [Custom 3D Printing](https://o7.am/services/3d.html): Prototypes, promotional items, and bespoke 3D-printed parts.
 - [Data Engineering](https://o7.am/services/de.html): ELT/ETL, Spark, Trino, Flink, and data pipelines.
 
