@@ -155,6 +155,12 @@ Images and other static assets. Copied as a whole into `out/assets/` (replace). 
 
 The site supports a light/dark theme (`data-theme="light"` or `"dark"` on `<html>`, toggled by `theme.js`). **Any new or changed text and UI must be theme-oriented:** use CSS variables (e.g. `var(--text-primary)`, `var(--bg-page)`, `var(--header-text)`) instead of hardcoded colors like `#fff` or `#000`. That way new copy, borders, and backgrounds respect the user's theme. See `style.css` and `templates/partials/critical.css` for the existing theme variables and `[data-theme="light"]` overrides.
 
+### Analytics (Cloudflare Web Analytics)
+
+`templates/partials/head.html` loads the [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) beacon (`static.cloudflareinsights.com/beacon.min.js`) on every page. It's cookieless and doesn't collect personal data, so **no cookie-consent banner is required** for it. The `data-cf-beacon` token in that script tag must be a real token from the Cloudflare dashboard (Analytics & Logs → Web Analytics → Add a site) — it does not require moving DNS/hosting to Cloudflare.
+
+The site previously used Google Analytics (`gtag.js`) plus a half-built cookie-consent banner in `app.js` that was never wired to any template element (`#cookie-banner` didn't exist) — both were removed. If GA or another tracker that sets cookies/identifiers is ever reintroduced, it needs a real consent gate (default-denied Consent Mode + an actual banner) before it can fire for EU/UK visitors — don't add tracking scripts to `head.html` without one.
+
 ### Support link (Ko-fi)
 
 A "support us" / "buy me a coffee" link points to Ko-fi (`https://ko-fi.com/o7am_`). It appears in the **footer** as the first social icon (same style as Instagram/LinkedIn) and on the **contact page** as a green round button with a coffee icon. Copy: `footer.support_us`, `contact.support_line`, `contact.support_cta` in `data/i18n.yaml`. No backend; link-only.
