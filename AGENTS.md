@@ -27,7 +27,7 @@ No manual `venv`/`pip install` step is needed once mise + uv are set up this way
 ### Local build
 
 - **Recommended:** `just build` (runs `uv run python build.py`; uv auto-creates `.venv` and installs deps from `pyproject.toml`/`uv.lock` on first run).
-- **Alternatively:** `uv run python build.py`, or `python build.py` with dependencies installed via `pip install -r requirements.txt` (this is what CI does — see [Deployment](#deployment-ci)).
+- **Alternatively:** `uv run python build.py` directly (same thing `just build` calls).
 
 The script:
 
@@ -53,7 +53,7 @@ The script:
 
 - **Workflow:** `.github/workflows/deploy-pages.yml`
 - **Trigger:** Push to `main`
-- **Steps:** Checkout → `pip install -r requirements.txt` → `python build.py` → upload `out/` as `upload-pages-artifact` → `deploy-pages` deploys that artifact to GitHub Pages.
+- **Steps:** Checkout → install uv + Python via `astral-sh/setup-uv` → `uv run python build.py` (installs deps from `pyproject.toml`/`uv.lock` automatically) → upload `out/` as `upload-pages-artifact` → `deploy-pages` deploys that artifact to GitHub Pages.
 - **Pages source:** In repo **Settings → Pages**, the source must be **GitHub Actions** (not “Deploy from a branch”).
 
 ---
@@ -67,9 +67,8 @@ The script:
 | `build.py`      | Static site generator. Loads `data/*.yaml`, renders `templates/`, writes to `out/`, copies static assets. |
 | `mise.toml`      | Pins tool versions (Python, uv, just, node) for [mise](https://mise.jdx.dev/); `mise install` sets up a machine for local dev. See [Environment setup](#environment-setup-once-per-machine). |
 | `justfile`      | Commands: `just build`, `just serve`, `just sync-en`, `just fonts`, `just perf`. Uses `uv run` throughout. |
-| `pyproject.toml` | Minimal uv project file (Jinja2, PyYAML deps) so `uv run` auto-manages `.venv` locally. Not used by CI. |
+| `pyproject.toml` | Single source of truth for Python deps (Jinja2, PyYAML). `uv run` (local and CI) auto-manages `.venv` from this + `uv.lock`. |
 | `uv.lock`        | Locked dependency versions for `pyproject.toml`, generated/updated by `uv`. Commit changes when deps change. |
-| `requirements.txt` | Python deps for the build: `Jinja2`, `PyYAML`. Used by CI (`pip install -r requirements.txt`); kept in sync with `pyproject.toml` by hand. |
 | `style.css`      | Global styles (full stylesheet, loaded non-blocking). Copied into `out/` as-is. |
 | `app.js`        | Global front-end script (e.g. menu, lazy loading, emoji-grid search). Copied into `out/`. |
 | `theme.js`      | Light/dark theme toggle script (persists choice, e.g. to `localStorage`). Copied into `out/`. |
