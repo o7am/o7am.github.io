@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block schema %}
+<script type="application/ld+json">{{ service_schema | tojson }}</script>
+{% endblock %}
 {% block main %}
 <section class="page-header" style="position: relative; pointer-events: auto;">
     <h1>{{ t.services['3d_short'] }}</h1>

@@ -5,9 +5,12 @@
     pl: "Druk 3D w małym biznesie: rewolucja w tworzeniu produktów"
     en: "3D printing in small business: a revolution in product creation"
   description:
-    pl: "Artykuły o druku 3D, Data Engineering i technologiach dla biznesu."
-    en: "Articles on 3D printing, Data Engineering and tech for business."
-  date: "25 sty"
+    pl: "Jak druk 3D obniża koszty prototypowania i produkcji w małych firmach – korzyści, przykłady zastosowań i podsumowanie."
+    en: "How 3D printing cuts prototyping and production costs for small businesses – benefits, real-world examples and a summary."
+  date:
+    pl: "25 sty 2026"
+    en: "25 Jan 2026"
+  date_iso: "2026-01-25"
   image: "assets/blogs/1/entry1.webp"
   subtitle:
     pl: "Trendy w druku 3D"

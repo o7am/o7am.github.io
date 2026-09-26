@@ -1664,35 +1664,36 @@
     }
 }
 
-.app-container .text-image__text h2 {
+.app-container .text-image__text h1 {
     position: relative;
+    text-transform: none;
 }
 
 /* Main page tagline — one size bigger */
-.app-container .text-image--top-spaced .text-image__text h2 {
+.app-container .text-image--top-spaced .text-image__text h1 {
     font-size: 48px;
 }
 
 @media (max-width: 1500px) {
-    .app-container .text-image--top-spaced .text-image__text h2 {
+    .app-container .text-image--top-spaced .text-image__text h1 {
         font-size: 42px;
     }
 }
 
 @media (max-width: 1000px) {
-    .app-container .text-image--top-spaced .text-image__text h2 {
+    .app-container .text-image--top-spaced .text-image__text h1 {
         font-size: 36px;
     }
 }
 
 @media (max-width: 768px) {
-    .app-container .text-image--top-spaced .text-image__text h2 {
+    .app-container .text-image--top-spaced .text-image__text h1 {
         font-size: 38px;
     }
 }
 
 @media (max-width: 480px) {
-    .app-container .text-image--top-spaced .text-image__text h2 {
+    .app-container .text-image--top-spaced .text-image__text h1 {
         font-size: 30px;
     }
 }
@@ -1705,7 +1706,7 @@
 }
 
 @media (max-width: 1000px) {
-    .app-container .text-image__text h2 {
+    .app-container .text-image__text h1 {
         font-size: 30px;
     }
     .app-container .text-image__text p,
@@ -1715,7 +1716,7 @@
 }
 
 @media (max-width: 768px) {
-    .app-container .text-image__text h2 {
+    .app-container .text-image__text h1 {
         font-size: 32px;
     }
     .app-container .text-image__text p,
@@ -1725,7 +1726,7 @@
 }
 
 @media (max-width: 480px) {
-    .app-container .text-image__text h2 {
+    .app-container .text-image__text h1 {
         font-size: 28px;
     }
     .app-container .text-image__text p,
