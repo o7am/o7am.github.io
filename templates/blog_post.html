@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
+{% block schema %}
+<script type="application/ld+json">{{ blogposting_schema | tojson }}</script>
+{% endblock %}
 {% block main %}
 <div style="position: relative; pointer-events: auto;" class="">
     <section class="page-header">
         <h1>{{ blog.title[locale] }}</h1>
         <p>{{ blog.subtitle[locale] }}</p>
-        <span class="date">{{ blog.date }}</span>
+        <span class="date">{{ blog.date[locale] }}</span>
     </section>
     <div class="wider-photo">
         <img loading="lazy" src="{{ root }}{{ blog.image }}" alt="{{ blog.title[locale] }}">

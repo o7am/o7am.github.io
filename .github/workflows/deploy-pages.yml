@@ -25,6 +25,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Full history needed so build.py can read per-file git dates for sitemap lastmod.
+          fetch-depth: 0
 
       - name: Install uv (and Python)
         uses: astral-sh/setup-uv@v5
