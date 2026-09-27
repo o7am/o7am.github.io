@@ -6,6 +6,7 @@ Reads data from data/*.yaml, renders Jinja templates, writes to out/, copies sta
 from pathlib import Path
 from datetime import date
 from functools import lru_cache
+import hashlib
 import shutil
 import subprocess
 import yaml
@@ -18,6 +19,13 @@ OUT_DIR = Path("out")
 DATA_DIR = Path("data")
 TEMPLATES_DIR = Path("templates")
 STATIC_FILES = ["style.css", "app.js", "theme.js", "CNAME", "robots.txt", "llms.txt"]
+# Cache-busted on every deploy: static assets are served with a long max-age (see robots.txt-adjacent
+# CDN config), so a content-hash query string is the only way updates reach already-cached visitors.
+CACHE_BUSTED_ASSETS = ["style.css", "app.js", "theme.js"]
+
+
+def file_hash(path, length=10):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()[:length]
 STATIC_DIRS = ["assets"]
 
 # Extra content sources (beyond the page's own template) that affect a page's lastmod.
@@ -108,6 +116,8 @@ def main():
     out = OUT_DIR
     out.mkdir(exist_ok=True)
 
+    asset_versions = {name: file_hash(name) for name in CACHE_BUSTED_ASSETS}
+
     data = {
         "i18n": load_yaml("i18n"),
         "blogs": load_yaml("blogs"),
@@ -181,6 +191,7 @@ def main():
             "alternate_x": f"{SITE_URL}/{pl_path}",
             "other_lang_href": other_lang_href,
             "local_business_schema": LOCAL_BUSINESS_SCHEMA,
+            "asset_v": asset_versions,
             **ctx,
         }
 
