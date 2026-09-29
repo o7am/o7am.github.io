@@ -34,21 +34,54 @@ pl:
     it_title: "Wsparcie IT | o7AM"
     it_short: "Wsparcie IT"
     it_teaser: "Pomoc techniczna, konfiguracja, utrzymanie systemów"
+    it_description: "Wsparcie IT w o7AM: sieci domowe, serwery NAS, odzyskiwanie danych, konfiguracja i utrzymanie komputerów."
     it_cta: "Pomoc techniczna, konfiguracja stanowisk i sieci, utrzymanie systemów. Wsparcie zdalne i na miejscu, elastyczne formy współpracy."
     it_heading: "Ogólne wsparcie IT dla firm"
     it_body: "Oferujemy wsparcie informatyczne dla małych i średnich firm: konfiguracja stanowisk i sieci, utrzymanie systemów, pomoc zdalna i na miejscu, wdrożenia oraz doradztwo. Elastyczne formy współpracy dopasowane do Twoich potrzeb."
+    it_engagements_heading: "Przykładowe realizacje"
+    it_engagements: |
+      <ul>
+        <li>Konfiguracja lokalnej sieci domowej dla kilku gospodarstw domowych — połączenie urządzeń i stabilny dostęp do internetu w całym budynku.</li>
+        <li>Instalacja i konfiguracja serwera NAS — scentralizowane przechowywanie plików i automatyczne kopie zapasowe.</li>
+        <li>Pomoc w odzyskiwaniu danych — odzyskiwanie ważnych plików lub dostępu, w zależności od możliwości i okoliczności danej sprawy.</li>
+        <li>Konfiguracja i bieżące utrzymanie komputerów oraz stanowisk pracy, tak aby działały niezawodnie na co dzień.</li>
+      </ul>
     3d_title: "Druk 3D na zamówienie | o7AM"
     3d_short: "Druk 3D na zamówienie"
     3d_teaser: "Indywidualne projekty, wysoka jakość, szybki czas realizacji"
+    3d_description: "Druk 3D na zamówienie w o7AM: szybkie prototypowanie, części zamienne, gadżety reklamowe w małych seriach, druki z QR/NFC. Zobacz, w czym możemy pomóc."
     3d_cta: "Oferujemy profesjonalne drukowanie elementów 3D na zamówienie, dostosowane do indywidualnych potrzeb klienta. Wysoka jakość i terminowość."
     3d_heading: "Dlaczego warto skorzystać z druku 3D na zamówienie"
     3d_body: "Oferujemy usługi druku 3D, które pozwalają na realizację indywidualnych projektów dostosowanych do potrzeb naszych klientów. Dzięki nowoczesnej technologii możemy tworzyć skomplikowane modele, prototypy, części zamienne oraz unikalne produkty. Wysoka jakość materiałów, wsparcie ekspertów na każdym etapie i elastyczne podejście do projektowania. Z nami możesz zrealizować nawet najbardziej ambitne projekty."
+    3d_engagements_heading: "W czym możemy pomóc"
+    3d_engagements: |
+      <ul>
+        <li>Trwałe wydruki z kodami QR lub wbudowanymi tagami NFC — fizyczne oznaczenia, plakietki czy szyldy z działającym kodem QR lub chipem NFC, do interaktywnego marketingu lub oznaczania sprzętu.</li>
+        <li>Szybkie prototypowanie wspomagane AI — od pomysłu do fizycznego PoC w krótkim czasie, a potem wspólna iteracja z Tobą w cyklu "drukuj - testuj - popraw" (fast fail, fast learn).</li>
+        <li>Części zamienne do trudno dostępnych lub wycofanych z produkcji elementów — w tym odwzorowanie przez skanowanie 3D lub na podstawie pomiarów czy zdjęć, gdy nie ma oryginalnego pliku.</li>
+        <li>Gadżety reklamowe i marketingowe drukowane na żądanie w małych seriach, bez dużego minimum zamówienia — zobacz nasz <a href="/portfolios/3d_prints.html">brandowany uchwyt na filtry V60-2 Hario</a> jako realny przykład.</li>
+        <li>Wyślij swój plik (STL/STEP) lub po prostu pomysł — wycenimy go indywidualnie (docelowo planujemy też narzędzie do samoobsługowej wyceny).</li>
+        <li>Niestandardowe uchwyty i przyrządy warsztatowe dla innych małych firm i twórców — narzędzia szyte na miarę, które przyspieszają i ułatwiają ręczną pracę.</li>
+        <li>Druk wielokolorowy i wielomateriałowy (MMU) oraz filament wzmacniany włóknem węglowym dla elementów wymagających większej wytrzymałości niż standardowe PLA.</li>
+        <li>Materiały przyjazne środowisku tam, gdzie to możliwe — zgodnie z naszym zrównoważonym, iteracyjnym podejściem do projektowania.</li>
+      </ul>
     de_title: "Data Engineering | o7AM"
     de_short: "Data Engineering"
     de_teaser: "ELT/ETL, Spark, Trino, Flink"
+    de_description: "Data Engineering w o7AM: migracje Airflow, CDC z Debezium, tabele Iceberg na S3, dashboardy Superset. Zobacz nasze przykładowe realizacje."
     de_cta: "Specjalizujemy się w kompleksowym przetwarzaniu danych oraz inżynierii danych, oferując rozwiązania dopasowane do specyficznych potrzeb biznesowych."
     de_heading: "Usługi z zakresu Data Engineeringu"
-    de_body: "Specjalizujemy się w dostarczaniu rozwiązań z zakresu Data Engineeringu: projektowanie i budowa potoków danych (Spark, Flink, Airflow), ETL/ELT, Big Data, usługi chmurowe (AWS, GCP, Kubernetes, Terraform). Rozwiązania dopasowane do kontekstu biznesowego i technologicznego. Skontaktuj się z nami, aby dowiedzieć się, jak możemy wspierać rozwój Twojego biznesu."
+    de_body: "Specjalizujemy się w dostarczaniu rozwiązań z zakresu Data Engineeringu: projektowanie i budowa potoków danych (Spark, Flink, Airflow), ETL/ELT, Big Data, usługi chmurowe (AWS, GCP, Kubernetes, Terraform). Rozwiązania dopasowane do kontekstu biznesowego i technologicznego. Zapewniamy też bieżące, doraźne wsparcie zespołów danych — od debugowania pipeline'ów po szybkie zmiany w logice ETL/ELT na życzenie. Skontaktuj się z nami, aby dowiedzieć się, jak możemy wspierać rozwój Twojego biznesu."
+    de_engagements_heading: "Przykładowe realizacje"
+    de_engagements: |
+      <ul>
+        <li>Migracja orkiestracji Apache Airflow z wersji 2 do 3 dla platformy rezerwacyjnej z branży healthtech — aktualizacja DAG-ów i customowych operatorów bez przerw w codziennych i cogodzinnych ładowaniach danych.</li>
+        <li>Wdrożenie przechwytywania zmian danych (CDC) z użyciem Kafki i Debezium, zasilające hurtownię Redshift niemal w czasie rzeczywistym — w miejsce wolniejszego ładowania wyłącznie wsadowego.</li>
+        <li>Budowa warstwy tabel Apache Iceberg bezpośrednio na surowym S3 jako gotowego do analiz storage'u, odpytywanego przez silniki takie jak Amazon Athena, bez dodatkowego etapu ETL do osobnej hurtowni.</li>
+        <li>Zaprojektowanie procesu promocji dashboardów Apache Superset pomiędzy środowiskami (dev/staging/produkcja), umożliwiającego bezpieczne, samoobsługowe raportowanie w całej organizacji.</li>
+        <li>Migracja przetwarzania strumieniowego z Apache Storm do Apache Flink na AWS dla firmy z branży wydawniczej/mediowej, wraz z testami integracyjnymi opartymi o Localstack i Docker.</li>
+        <li>Konsolidacja danych z niejednorodnych źródeł (XML, Excel, SQL, web) w jednym narzędziu analitycznym dla kadry zarządzającej firmy badawczej.</li>
+      </ul>
   blog:
     page_title: "blog"
     subtitle: "Poznaj nasze innowacyjne rozwiązania 3D"
@@ -110,21 +143,54 @@ en:
     it_title: "IT Support | o7AM"
     it_short: "IT Support"
     it_teaser: "Technical support, setup, system maintenance"
+    it_description: "IT support at o7AM: home networks, NAS servers, data recovery help, workstation setup and maintenance."
     it_cta: "Technical support, workstation and network setup, system maintenance. Remote and on-site support, flexible engagement."
     it_heading: "General IT support for business"
     it_body: "We offer IT support for small and medium businesses: workstation and network setup, system maintenance, remote and on-site help, deployments and consulting. Flexible engagement to match your needs."
+    it_engagements_heading: "Example engagements"
+    it_engagements: |
+      <ul>
+        <li>Local home network setup for several households — connecting devices and delivering stable internet access throughout the building.</li>
+        <li>NAS (network-attached storage) setup and configuration — centralized file storage and automated backups.</li>
+        <li>Data recovery support — retrieving important files or regaining access, depending on what's technically possible in each case.</li>
+        <li>Workstation setup and ongoing maintenance, keeping computers running reliably day to day.</li>
+      </ul>
     3d_title: "Custom 3D Printing | o7AM"
     3d_short: "Custom 3D Printing"
     3d_teaser: "Custom projects, high quality, fast turnaround"
+    3d_description: "Custom 3D printing at o7AM: rapid prototyping, replacement parts, small-batch branded items, QR/NFC prints. See what we can help with."
     3d_cta: "We offer professional 3D printing to order, tailored to your needs. High quality and on-time delivery."
     3d_heading: "Why choose custom 3D printing"
     3d_body: "We offer 3D printing services that enable custom projects tailored to our clients' needs. Using modern technology we can create complex models, prototypes, spare parts and unique products. High-quality materials, expert support at every stage and a flexible approach to design. With us you can deliver even the most ambitious projects."
+    3d_engagements_heading: "What we can help with"
+    3d_engagements: |
+      <ul>
+        <li>Durable QR-code and NFC-embedded prints — physical tags, plaques or signage with a working QR code or embedded NFC chip, for interactive marketing or asset tracking.</li>
+        <li>Rapid, AI-assisted prototyping — from idea to physical proof-of-concept fast, then iterate together with you in a print-test-refine cycle ("fast fail, fast learn").</li>
+        <li>Replacement parts for hard-to-find or discontinued items — including reconstruction via 3D scanning or remodeling from measurements or photos when no original file exists.</li>
+        <li>On-demand promotional and marketing items in small batches, no large minimum order — see our <a href="/en/portfolios/3d_prints.html">branded V60-2 Hario filter holder</a> as a real example.</li>
+        <li>Bring your own file (STL/STEP) — or just an idea — and we'll quote it individually (a self-service pricing tool is on our roadmap).</li>
+        <li>Custom jigs and fixtures for workshops and other small businesses — purpose-built tools that make manual work faster and more consistent.</li>
+        <li>Multi-color and multi-material printing (MMU), plus carbon-fiber-reinforced filament for parts that need more strength than standard PLA.</li>
+        <li>Eco-conscious materials where possible, in line with our sustainable, iterative approach to design.</li>
+      </ul>
     de_title: "Data Engineering | o7AM"
     de_short: "Data Engineering"
     de_teaser: "ELT/ETL, Spark, Trino, Flink"
+    de_description: "Data Engineering at o7AM: Airflow migrations, Debezium CDC, Iceberg tables on S3, Superset dashboards. See our example engagements."
     de_cta: "We specialize in data processing and data engineering, offering solutions tailored to your business needs."
     de_heading: "Data Engineering services"
-    de_body: "We specialize in delivering Data Engineering solutions: design and build of data pipelines (Spark, Flink, Airflow), ETL/ELT, Big Data, cloud services (AWS, GCP, Kubernetes, Terraform). Solutions tailored to your business and technology context. Get in touch to find out how we can support your business growth."
+    de_body: "We specialize in delivering Data Engineering solutions: design and build of data pipelines (Spark, Flink, Airflow), ETL/ELT, Big Data, cloud services (AWS, GCP, Kubernetes, Terraform). Solutions tailored to your business and technology context. We also provide ongoing, ad-hoc support for data teams — from pipeline debugging to fast-turnaround changes in ETL/ELT logic. Get in touch to find out how we can support your business growth."
+    de_engagements_heading: "Example engagements"
+    de_engagements: |
+      <ul>
+        <li>Apache Airflow 2 → 3 orchestration migration for a healthtech booking platform's production data pipelines — upgrading DAGs and custom operators with zero disruption to daily and hourly data loads.</li>
+        <li>Kafka + Debezium change-data-capture pipelines feeding a Redshift data warehouse in near real time, replacing slower batch-only ingestion.</li>
+        <li>Apache Iceberg tables built directly on raw S3 as an analytics-ready storage layer, queried by engines like Amazon Athena — no separate data-warehouse ETL hop required.</li>
+        <li>A dashboard promotion process for Apache Superset across dev/staging/production environments, enabling safe, self-service reporting company-wide.</li>
+        <li>Migrated real-time stream processing from Apache Storm to Apache Flink on AWS for a media/publishing company, including integration testing with Localstack and Docker.</li>
+        <li>Consolidated data from heterogeneous sources (XML, Excel, SQL, web) into a single analytics tool for a market-research company's executive team.</li>
+      </ul>
   blog:
     page_title: "Blog"
     subtitle: "Discover our innovative 3D solutions"
