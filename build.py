@@ -26,6 +26,20 @@ CACHE_BUSTED_ASSETS = ["style.css", "app.js", "theme.js"]
 
 def file_hash(path, length=10):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()[:length]
+
+
+def clean_url_path(path):
+    """Collapse an 'index.html' filename to its directory form, so the homepage has a
+    single canonical URL (https://o7.am/) instead of also being reachable/indexable at
+    /index.html — both serve identical content on GitHub Pages with no redirect between
+    them, which is a duplicate-content signal for search engines."""
+    if path == "index.html":
+        return ""
+    if path.endswith("/index.html"):
+        return path[: -len("index.html")]
+    return path
+
+
 STATIC_DIRS = ["assets"]
 
 # Extra content sources (beyond the page's own template) that affect a page's lastmod.
@@ -138,27 +152,27 @@ def main():
         t = data["i18n"][loc]
 
         # Index (preload LCP image for performance)
-        pages.append((f"{prefix}index.html", "index.html", {"title": t["meta"]["home_title"], "description": t["meta"]["home_description"], "canonical_path": f"{prefix.rstrip('/') or ''}", "body_class": "front-page", "preload_lcp": True}))
+        pages.append((f"{prefix}index.html", "index.html", {"title": t["meta"]["home_title"], "description": t["meta"]["home_description"], "body_class": "front-page", "preload_lcp": True}))
         # Blog list
-        pages.append((f"{prefix}blog.html", "blog.html", {"title": t["meta"]["blog_title"], "description": t["meta"]["blog_description"], "canonical_path": f"{prefix}blog.html", "blogs": data["blogs"]}))
+        pages.append((f"{prefix}blog.html", "blog.html", {"title": t["meta"]["blog_title"], "description": t["meta"]["blog_description"], "blogs": data["blogs"]}))
         # Portfolio list
-        pages.append((f"{prefix}portfolio.html", "portfolio.html", {"title": t["meta"]["portfolio_title"], "description": t["meta"]["portfolio_description"], "canonical_path": f"{prefix}portfolio.html", "portfolios": data["portfolios"]}))
+        pages.append((f"{prefix}portfolio.html", "portfolio.html", {"title": t["meta"]["portfolio_title"], "description": t["meta"]["portfolio_description"], "portfolios": data["portfolios"]}))
         # Services
-        pages.append((f"{prefix}services.html", "services.html", {"title": t["meta"]["services_title"], "description": t["meta"]["services_description"], "canonical_path": f"{prefix}services.html"}))
+        pages.append((f"{prefix}services.html", "services.html", {"title": t["meta"]["services_title"], "description": t["meta"]["services_description"]}))
         # Contact
-        pages.append((f"{prefix}contact.html", "contact.html", {"title": t["meta"]["contact_title"], "description": t["meta"]["contact_description"], "canonical_path": f"{prefix}contact.html"}))
+        pages.append((f"{prefix}contact.html", "contact.html", {"title": t["meta"]["contact_title"], "description": t["meta"]["contact_description"]}))
 
         # Service subpages
-        pages.append((f"{prefix}services/de.html", "service_de.html", {"title": t["services"]["de_title"], "description": t["services"].get("de_description", t["meta"]["services_description"]), "canonical_path": f"{prefix}services/de.html", "service_key": "de"}))
-        pages.append((f"{prefix}services/3d.html", "service_3d.html", {"title": t["services"]["3d_title"], "description": t["services"].get("3d_description", t["meta"]["services_description"]), "canonical_path": f"{prefix}services/3d.html", "service_key": "3d"}))
-        pages.append((f"{prefix}services/it.html", "service_it.html", {"title": t["services"]["it_title"], "description": t["services"].get("it_description", t["meta"]["services_description"]), "canonical_path": f"{prefix}services/it.html", "service_key": "it"}))
+        pages.append((f"{prefix}services/de.html", "service_de.html", {"title": t["services"]["de_title"], "description": t["services"].get("de_description", t["meta"]["services_description"]), "service_key": "de"}))
+        pages.append((f"{prefix}services/3d.html", "service_3d.html", {"title": t["services"]["3d_title"], "description": t["services"].get("3d_description", t["meta"]["services_description"]), "service_key": "3d"}))
+        pages.append((f"{prefix}services/it.html", "service_it.html", {"title": t["services"]["it_title"], "description": t["services"].get("it_description", t["meta"]["services_description"]), "service_key": "it"}))
 
         # Blog posts
         for b in data["blogs"]:
             slug = b["slug"]
             title = b["title"][loc]
             desc = b.get("description", {}).get(loc, data["i18n"][loc]["meta"]["blog_description"])
-            pages.append((f"{prefix}blogs/{slug}.html", "blog_post.html", {"blog": b, "title": title, "description": desc, "canonical_path": f"{prefix}blogs/{slug}.html"}))
+            pages.append((f"{prefix}blogs/{slug}.html", "blog_post.html", {"blog": b, "title": title, "description": desc}))
 
         # Portfolio items
         for p in data["portfolios"]:
@@ -166,7 +180,7 @@ def main():
             title = p["title"][loc]
             desc = p.get("description", {}).get(loc, data["i18n"][loc]["meta"]["portfolio_description"])
             template_name = "portfolio_emoji.html" if slug == "emoji" else "portfolio_item.html"
-            pages.append((f"{prefix}portfolios/{slug}.html", template_name, {"item": p, "title": title, "description": desc, "canonical_path": f"{prefix}portfolios/{slug}.html"}))
+            pages.append((f"{prefix}portfolios/{slug}.html", template_name, {"item": p, "title": title, "description": desc}))
 
     sitemap_entries = []
 
@@ -177,7 +191,8 @@ def main():
         pl_path = rel_path[3:] if rel_path.startswith("en/") else rel_path
         en_path = "en/" + rel_path if not rel_path.startswith("en/") else rel_path
         other_lang_href = f"en/{rel_path}" if locale == "pl" else f"../{rel_path[3:]}"
-        canonical_url = f"{SITE_URL}/{rel_path}"
+        canonical_url = f"{SITE_URL}/{clean_url_path(rel_path)}"
+        home_url = "/en/" if locale == "en" else "/"
         t = data["i18n"][locale]
         full_ctx = {
             "base": base,
@@ -186,9 +201,10 @@ def main():
             "t": t,
             "site_url": SITE_URL,
             "canonical_url": canonical_url,
-            "alternate_pl": f"{SITE_URL}/{pl_path}",
-            "alternate_en": f"{SITE_URL}/{en_path}",
-            "alternate_x": f"{SITE_URL}/{pl_path}",
+            "home_url": home_url,
+            "alternate_pl": f"{SITE_URL}/{clean_url_path(pl_path)}",
+            "alternate_en": f"{SITE_URL}/{clean_url_path(en_path)}",
+            "alternate_x": f"{SITE_URL}/{clean_url_path(pl_path)}",
             "other_lang_href": other_lang_href,
             "local_business_schema": LOCAL_BUSINESS_SCHEMA,
             "asset_v": asset_versions,
