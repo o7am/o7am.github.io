@@ -8,7 +8,7 @@
     <div class="blog-archive__container">
         <div class="blog-archive__items">
             {% for b in blogs %}
-            <a class="blog-archive__item" href="{{ base }}blogs/{{ b.slug }}.html">
+            <a class="blog-archive__item" href="{{ base }}blogs/{{ b.slug }}">
                 <div class="blog-archive__item-image">
                     <img alt="{{ b.title[locale] }}" src="{{ root }}{{ b.image }}" loading="lazy">
                 </div>

@@ -7,7 +7,7 @@
     <div class="blog-archive__container">
         <div class="blog-archive__items">
             {% for p in portfolios %}
-            <a href="{{ base }}portfolios/{{ p.slug }}.html" class="blog-archive__item">
+            <a href="{{ base }}portfolios/{{ p.slug }}" class="blog-archive__item">
                 <div class="blog-archive__item-image">
                     <img loading="lazy" src="{{ root }}{{ p.image }}" alt="{{ p.title[locale] }}">
                 </div>

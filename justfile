@@ -7,9 +7,9 @@ default: build
 build:
     uv run python build.py
 
-# Preview built site locally (serve out/ on port 8000)
+# Preview built site locally on port 8000 with Cloudflare Pages semantics (extensionless URLs, _headers, _redirects)
 serve:
-    uv run python -m http.server 8000 --directory out
+    npx --yes wrangler pages dev out --port 8000
 
 # Compare PL vs EN content in data/*.yaml (missing EN keys, EN identical to PL)
 sync-en:
