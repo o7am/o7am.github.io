@@ -19,19 +19,19 @@ pl:
     alice_alt: "o7AM: Usługi IT, Druk 3D i Inżynieria Danych dla Twojego biznesu"
     index_intro_1: 'W o7AM stawiamy na kreatywne podejście i nieszablonowe rozwiązania, które zmieniają sposób myślenia o technologii 3D. Dzięki szybkiemu prototypowaniu, ekologicznym metodom oraz podejściu "fast fail, fast learn" pomagamy naszym klientom realizować projekty, które są zarówno innowacyjne, jak i efektywne.'
     index_intro_2: "Naszym celem jest dostarczanie produktów i usług, które nie tylko odpowiadają na unikalne potrzeby naszych klientów, ale także wyprzedzają ich oczekiwania."
-    home_title: "o7AM |> IT | 3D | Data"
-    home_description: "o7AM: druk 3D na zamówienie, Data Engineering i rozwiązania ML. Radzyń, Wielkopolska. Jakość i terminowość."
-    blog_title: "Blog | o7AM"
+    home_title: "o7AM – usługi IT, druk 3D i Data Engineering | Wielkopolska"
+    home_description: "o7AM: druk 3D na zamówienie, Data Engineering i rozwiązania ML. Radzyny, Wielkopolska. Jakość i terminowość."
+    blog_title: "Blog o druku 3D, danych i technologiach IT | o7AM"
     blog_description: "Artykuły o druku 3D, Data Engineering i technologiach dla biznesu."
-    portfolio_title: "Portfolio | o7AM"
+    portfolio_title: "Portfolio – realizacje druku 3D i projekty IT | o7AM"
     portfolio_description: "Realizacje o7AM: projekty 3D, gadżety reklamowe, wdrożenia z zakresu danych i ML."
-    services_title: "Usługi | o7AM – druk 3D i Data Engineering"
+    services_title: "Usługi: Data Engineering, druk 3D i wsparcie IT | o7AM"
     services_description: "Druk 3D na zamówienie oraz Data Engineering. Rozwiązania dopasowane do Twojego biznesu."
-    contact_title: "Kontakt | o7AM"
-    contact_description: "Skontaktuj się z o7AM. Radzyń, Wielkopolska. Druk 3D, Data Engineering, ML."
+    contact_title: "Kontakt z o7AM – wycena druku 3D i projektów danych"
+    contact_description: "Skontaktuj się z o7AM. Radzyny, Wielkopolska. Druk 3D, Data Engineering, ML."
   services:
     heading: "Nasze usługi dla Twojego biznesu"
-    it_title: "Wsparcie IT | o7AM"
+    it_title: "Wsparcie IT dla firm – sieci, NAS, serwis komputerów | o7AM"
     it_short: "Wsparcie IT"
     it_teaser: "Pomoc techniczna, konfiguracja, utrzymanie systemów"
     it_description: "Wsparcie IT w o7AM: sieci domowe, serwery NAS, odzyskiwanie danych, konfiguracja i utrzymanie komputerów."
@@ -46,7 +46,7 @@ pl:
         <li>Pomoc w odzyskiwaniu danych — odzyskiwanie ważnych plików lub dostępu, w zależności od możliwości i okoliczności danej sprawy.</li>
         <li>Konfiguracja i bieżące utrzymanie komputerów oraz stanowisk pracy, tak aby działały niezawodnie na co dzień.</li>
       </ul>
-    3d_title: "Druk 3D na zamówienie | o7AM"
+    3d_title: "Druk 3D na zamówienie – prototypy i gadżety | o7AM"
     3d_short: "Druk 3D na zamówienie"
     3d_teaser: "Indywidualne projekty, wysoka jakość, szybki czas realizacji"
     3d_description: "Druk 3D na zamówienie w o7AM: szybkie prototypowanie, części zamienne, gadżety reklamowe w małych seriach, druki z QR/NFC. Zobacz, w czym możemy pomóc."
@@ -65,7 +65,7 @@ pl:
         <li>Druk wielokolorowy i wielomateriałowy (MMU) oraz filament wzmacniany włóknem węglowym dla elementów wymagających większej wytrzymałości niż standardowe PLA.</li>
         <li>Materiały przyjazne środowisku tam, gdzie to możliwe — zgodnie z naszym zrównoważonym, iteracyjnym podejściem do projektowania.</li>
       </ul>
-    de_title: "Data Engineering | o7AM"
+    de_title: "Data Engineering – potoki danych, ETL/ELT, Airflow | o7AM"
     de_short: "Data Engineering"
     de_teaser: "ELT/ETL, Spark, Trino, Flink"
     de_description: "Data Engineering w o7AM: migracje Airflow, CDC z Debezium, tabele Iceberg na S3, dashboardy Superset. Zobacz nasze przykładowe realizacje."
@@ -128,19 +128,19 @@ en:
     alice_alt: "o7AM: IT, 3D & Data Engineering for your business"
     index_intro_1: 'At o7AM we focus on a creative approach and unconventional solutions that change how people think about 3D technology. With rapid prototyping, sustainable methods and a "fast fail, fast learn" mindset we help our clients deliver projects that are both innovative and effective.'
     index_intro_2: "Our goal is to deliver products and services that not only meet our clients' unique needs but also exceed their expectations."
-    home_title: "o7AM |> IT | 3D | Data"
-    home_description: "o7AM delivers custom 3D printing, Data Engineering and ML solutions for your business. Based in Radzyń, Greater Poland. Quality, precision and on-time delivery."
-    blog_title: "Blog | o7AM"
+    home_title: "o7AM – IT Services, 3D Printing & Data Engineering in Poland"
+    home_description: "o7AM delivers custom 3D printing, Data Engineering and ML solutions for your business. Based in Radzyny, Greater Poland. Quality, precision and on-time delivery."
+    blog_title: "Blog on 3D Printing, Data & Business Tech | o7AM"
     blog_description: "Articles on 3D printing, Data Engineering and tech for business."
-    portfolio_title: "Portfolio | o7AM"
+    portfolio_title: "Portfolio – 3D Printing Projects & Case Studies | o7AM"
     portfolio_description: "o7AM projects: 3D prints, promotional items, data and ML implementations."
-    services_title: "Services | o7AM"
+    services_title: "Services: Data Engineering, 3D Printing & IT Support | o7AM"
     services_description: "Custom 3D printing and Data Engineering. Solutions tailored to your business."
-    contact_title: "Contact | o7AM"
-    contact_description: "Get in touch with o7AM. Radzyń, Greater Poland. 3D printing, Data Engineering, ML."
+    contact_title: "Contact o7AM – Quotes for 3D Printing & Data Projects"
+    contact_description: "Get in touch with o7AM. Radzyny, Greater Poland. 3D printing, Data Engineering, ML."
   services:
     heading: "Our services for your business"
-    it_title: "IT Support | o7AM"
+    it_title: "IT Support for Small Businesses – Networks, NAS & PCs | o7AM"
     it_short: "IT Support"
     it_teaser: "Technical support, setup, system maintenance"
     it_description: "IT support at o7AM: home networks, NAS servers, data recovery help, workstation setup and maintenance."
@@ -155,7 +155,7 @@ en:
         <li>Data recovery support — retrieving important files or regaining access, depending on what's technically possible in each case.</li>
         <li>Workstation setup and ongoing maintenance, keeping computers running reliably day to day.</li>
       </ul>
-    3d_title: "Custom 3D Printing | o7AM"
+    3d_title: "Custom 3D Printing – Prototypes & Branded Items | o7AM"
     3d_short: "Custom 3D Printing"
     3d_teaser: "Custom projects, high quality, fast turnaround"
     3d_description: "Custom 3D printing at o7AM: rapid prototyping, replacement parts, small-batch branded items, QR/NFC prints. See what we can help with."
@@ -174,7 +174,7 @@ en:
         <li>Multi-color and multi-material printing (MMU), plus carbon-fiber-reinforced filament for parts that need more strength than standard PLA.</li>
         <li>Eco-conscious materials where possible, in line with our sustainable, iterative approach to design.</li>
       </ul>
-    de_title: "Data Engineering | o7AM"
+    de_title: "Data Engineering – Data Pipelines, ETL/ELT, Airflow | o7AM"
     de_short: "Data Engineering"
     de_teaser: "ELT/ETL, Spark, Trino, Flink"
     de_description: "Data Engineering at o7AM: Airflow migrations, Debezium CDC, Iceberg tables on S3, Superset dashboards. See our example engagements."

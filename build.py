@@ -12,7 +12,7 @@ import subprocess
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-SITE_URL = "https://o7.am"
+SITE_URL = "https://www.o7.am"
 SITE_NAME = "o7AM"
 BUSINESS_ID = f"{SITE_URL}/#business"
 OUT_DIR = Path("out")
@@ -30,7 +30,7 @@ def file_hash(path, length=10):
 
 def clean_url_path(path):
     """Collapse an 'index.html' filename to its directory form, so the homepage has a
-    single canonical URL (https://o7.am/) instead of also being reachable/indexable at
+    single canonical URL (https://www.o7.am/) instead of also being reachable/indexable at
     /index.html — both serve identical content on GitHub Pages with no redirect between
     them, which is a duplicate-content signal for search engines."""
     if path == "index.html":
@@ -38,6 +38,12 @@ def clean_url_path(path):
     if path.endswith("/index.html"):
         return path[: -len("index.html")]
     return path
+
+
+def page_title(item, loc):
+    """<title> for a blog/portfolio item: an explicit per-locale `seo_title` if set (for items whose
+    display title is too short to stand alone in search results), else the display title + site name."""
+    return item.get("seo_title", {}).get(loc) or f"{item['title'][loc]} | {SITE_NAME}"
 
 
 STATIC_DIRS = ["assets"]
@@ -170,14 +176,14 @@ def main():
         # Blog posts
         for b in data["blogs"]:
             slug = b["slug"]
-            title = b["title"][loc]
+            title = page_title(b, loc)
             desc = b.get("description", {}).get(loc, data["i18n"][loc]["meta"]["blog_description"])
             pages.append((f"{prefix}blogs/{slug}.html", "blog_post.html", {"blog": b, "title": title, "description": desc}))
 
         # Portfolio items
         for p in data["portfolios"]:
             slug = p["slug"]
-            title = p["title"][loc]
+            title = page_title(p, loc)
             desc = p.get("description", {}).get(loc, data["i18n"][loc]["meta"]["portfolio_description"])
             template_name = "portfolio_emoji.html" if slug == "emoji" else "portfolio_item.html"
             pages.append((f"{prefix}portfolios/{slug}.html", template_name, {"item": p, "title": title, "description": desc}))
@@ -190,7 +196,8 @@ def main():
         locale = "en" if rel_path.startswith("en/") else "pl"
         pl_path = rel_path[3:] if rel_path.startswith("en/") else rel_path
         en_path = "en/" + rel_path if not rel_path.startswith("en/") else rel_path
-        other_lang_href = f"en/{rel_path}" if locale == "pl" else f"../{rel_path[3:]}"
+        # Root-absolute and index.html-free, so the switcher never links to a duplicate /index.html URL.
+        other_lang_href = "/" + clean_url_path(en_path if locale == "pl" else pl_path)
         canonical_url = f"{SITE_URL}/{clean_url_path(rel_path)}"
         home_url = "/en/" if locale == "en" else "/"
         t = data["i18n"][locale]
@@ -275,10 +282,11 @@ def main():
     # Redirect /en.html to EN homepage (GitHub Pages doesn't serve /en as directory index)
     (out / "en.html").write_text(
         '<!DOCTYPE html><html><head><meta charset="utf-8">'
-        '<meta http-equiv="refresh" content="0;url=en/index.html">'
-        '<script>location.href="en/index.html";</script>'
+        f'<link rel="canonical" href="{SITE_URL}/en/"><meta name="robots" content="noindex">'
+        '<meta http-equiv="refresh" content="0;url=en/">'
+        '<script>location.href="en/";</script>'
         '<title>Redirect to English</title></head>'
-        '<body><p><a href="en/index.html">English version</a></p></body></html>',
+        '<body><p><a href="en/">English version</a></p></body></html>',
         encoding="utf-8",
     )
 
