@@ -10,3 +10,9 @@ dependencies = [
 
 [tool.uv]
 package = false
+
+# Cloudflare Pages auto-runs `pip install .` when it sees this file. There's no package here
+# (build.py is a script), so tell setuptools not to auto-discover data/, assets/, templates/.
+[tool.setuptools]
+py-modules = []
+packages = []
