@@ -116,6 +116,7 @@ Jinja2 templates. The build passes a shared context: `base` (path to **locale ro
 | `service_3d.html` | 3D printing service page. |
 | `service_de.html` | Data Engineering service page. |
 | `contact.html` | Contact page. |
+| `404.html` | Not-found page, rendered as `out/404.html` and `out/en/404.html` (copy in `i18n.yaml` → `not_found`). Cloudflare Pages serves the nearest one with status 404; without it, unknown URLs would return the homepage with 200 (a soft 404). It has `noindex`, no canonical/hreflang, stays out of the sitemap, and uses root-absolute `base`/`other_lang_href` because it's served at arbitrary paths. |
 
 ### `assets/`
 

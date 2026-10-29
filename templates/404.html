@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block main %}
+<section class="page-header">
+    <h1>{{ t.not_found.page_title }}</h1>
+</section>
+<section class="not-found">
+    <p>{{ t.not_found.body }}</p>
+    <p><a href="{{ home_url }}">{{ t.not_found.home_cta }}</a> · <a href="{{ base }}services">{{ t.not_found.services_cta }}</a></p>
+</section>
+{% endblock %}

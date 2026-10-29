@@ -168,6 +168,11 @@ def main():
         # Contact
         pages.append((f"{prefix}contact.html", "contact.html", {"title": t["meta"]["contact_title"], "description": t["meta"]["contact_description"]}))
 
+        # 404: Cloudflare Pages serves the nearest 404.html (en/404.html under /en/) with a 404 status.
+        # Without it, unknown URLs fall back to the homepage with 200 (a "soft 404"). It can be served at
+        # any depth, so in-locale links and the language switcher are root-absolute instead of relative.
+        pages.append((f"{prefix}404.html", "404.html", {"title": t["not_found"]["meta_title"], "description": t["not_found"]["meta_description"], "noindex": True, "base": f"/{prefix}", "other_lang_href": "/" if loc == "en" else "/en/"}))
+
         # Service subpages
         pages.append((f"{prefix}services/de.html", "service_de.html", {"title": t["services"]["de_title"], "description": t["services"].get("de_description", t["meta"]["services_description"]), "service_key": "de"}))
         pages.append((f"{prefix}services/3d.html", "service_3d.html", {"title": t["services"]["3d_title"], "description": t["services"].get("3d_description", t["meta"]["services_description"]), "service_key": "3d"}))
@@ -260,8 +265,9 @@ def main():
         out_file.parent.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html, encoding="utf-8")
 
-        sources = (TEMPLATES_DIR / template_name, *TEMPLATE_EXTRA_SOURCES.get(template_name, []))
-        sitemap_entries.append((canonical_url, git_last_modified(sources)))
+        if not ctx.get("noindex"):
+            sources = (TEMPLATES_DIR / template_name, *TEMPLATE_EXTRA_SOURCES.get(template_name, []))
+            sitemap_entries.append((canonical_url, git_last_modified(sources)))
 
     (out / "sitemap.xml").write_text(build_sitemap(sitemap_entries), encoding="utf-8")
 
