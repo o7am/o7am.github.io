@@ -1,6 +1,6 @@
 # o7AM
 
-> o7AM: custom 3D printing, Data Engineering, and ML solutions for business. Based in Radzyń, Wielkopolska.
+> o7AM: custom 3D printing, Data Engineering, and ML solutions for business. Based in Radzyny, Wielkopolska.
 
 ## Core
 

@@ -20,7 +20,7 @@ pl:
     index_intro_1: 'W o7AM stawiamy na kreatywne podejście i nieszablonowe rozwiązania, które zmieniają sposób myślenia o technologii 3D. Dzięki szybkiemu prototypowaniu, ekologicznym metodom oraz podejściu "fast fail, fast learn" pomagamy naszym klientom realizować projekty, które są zarówno innowacyjne, jak i efektywne.'
     index_intro_2: "Naszym celem jest dostarczanie produktów i usług, które nie tylko odpowiadają na unikalne potrzeby naszych klientów, ale także wyprzedzają ich oczekiwania."
     home_title: "o7AM – usługi IT, druk 3D i Data Engineering | Wielkopolska"
-    home_description: "o7AM: druk 3D na zamówienie, Data Engineering i rozwiązania ML. Radzyń, Wielkopolska. Jakość i terminowość."
+    home_description: "o7AM: druk 3D na zamówienie, Data Engineering i rozwiązania ML. Radzyny, Wielkopolska. Jakość i terminowość."
     blog_title: "Blog o druku 3D, danych i technologiach IT | o7AM"
     blog_description: "Artykuły o druku 3D, Data Engineering i technologiach dla biznesu."
     portfolio_title: "Portfolio – realizacje druku 3D i projekty IT | o7AM"
@@ -28,7 +28,7 @@ pl:
     services_title: "Usługi: Data Engineering, druk 3D i wsparcie IT | o7AM"
     services_description: "Druk 3D na zamówienie oraz Data Engineering. Rozwiązania dopasowane do Twojego biznesu."
     contact_title: "Kontakt z o7AM – wycena druku 3D i projektów danych"
-    contact_description: "Skontaktuj się z o7AM. Radzyń, Wielkopolska. Druk 3D, Data Engineering, ML."
+    contact_description: "Skontaktuj się z o7AM. Radzyny, Wielkopolska. Druk 3D, Data Engineering, ML."
   services:
     heading: "Nasze usługi dla Twojego biznesu"
     it_title: "Wsparcie IT dla firm – sieci, NAS, serwis komputerów | o7AM"
@@ -129,7 +129,7 @@ en:
     index_intro_1: 'At o7AM we focus on a creative approach and unconventional solutions that change how people think about 3D technology. With rapid prototyping, sustainable methods and a "fast fail, fast learn" mindset we help our clients deliver projects that are both innovative and effective.'
     index_intro_2: "Our goal is to deliver products and services that not only meet our clients' unique needs but also exceed their expectations."
     home_title: "o7AM – IT Services, 3D Printing & Data Engineering in Poland"
-    home_description: "o7AM delivers custom 3D printing, Data Engineering and ML solutions for your business. Based in Radzyń, Greater Poland. Quality, precision and on-time delivery."
+    home_description: "o7AM delivers custom 3D printing, Data Engineering and ML solutions for your business. Based in Radzyny, Greater Poland. Quality, precision and on-time delivery."
     blog_title: "Blog on 3D Printing, Data & Business Tech | o7AM"
     blog_description: "Articles on 3D printing, Data Engineering and tech for business."
     portfolio_title: "Portfolio – 3D Printing Projects & Case Studies | o7AM"
@@ -137,7 +137,7 @@ en:
     services_title: "Services: Data Engineering, 3D Printing & IT Support | o7AM"
     services_description: "Custom 3D printing and Data Engineering. Solutions tailored to your business."
     contact_title: "Contact o7AM – Quotes for 3D Printing & Data Projects"
-    contact_description: "Get in touch with o7AM. Radzyń, Greater Poland. 3D printing, Data Engineering, ML."
+    contact_description: "Get in touch with o7AM. Radzyny, Greater Poland. 3D printing, Data Engineering, ML."
   services:
     heading: "Our services for your business"
     it_title: "IT Support for Small Businesses – Networks, NAS & PCs | o7AM"
