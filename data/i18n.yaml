@@ -101,6 +101,13 @@ pl:
     address_line2: "Radzyny 64-530"
     support_line: "Podoba Ci się to, co robimy? Kup nam kawę."
     support_cta: "Kup mi kawę"
+  not_found:
+    meta_title: "Nie znaleziono strony (404) | o7AM – IT, druk 3D, dane"
+    meta_description: "Ta strona nie istnieje. Przejdź do strony głównej o7AM lub sprawdź nasze usługi."
+    page_title: "Nie znaleziono strony"
+    body: "Strona, której szukasz, nie istnieje lub została przeniesiona."
+    home_cta: "Wróć na stronę główną"
+    services_cta: "Zobacz nasze usługi"
   footer:
     contact: "Kontakt"
     services: "Usługi"
@@ -210,6 +217,13 @@ en:
     address_line2: "Radzyny 64-530"
     support_line: "Like what we do? Buy us a coffee."
     support_cta: "Buy me a coffee"
+  not_found:
+    meta_title: "Page Not Found (404) | o7AM – IT, 3D Printing, Data"
+    meta_description: "This page doesn't exist. Go to the o7AM homepage or browse our services."
+    page_title: "Page not found"
+    body: "The page you're looking for doesn't exist or has been moved."
+    home_cta: "Back to the homepage"
+    services_cta: "See our services"
   footer:
     contact: "Contact"
     services: "Services"

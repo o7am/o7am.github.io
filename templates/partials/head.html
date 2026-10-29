@@ -27,8 +27,12 @@
 <noscript><link rel="stylesheet" href="{{ root }}style.css?v={{ asset_v['style.css'] }}" /></noscript>
 <meta property="og:image" content="{{ site_url }}/assets/o7am/logo_wide.jpg" />
 <meta name="twitter:image" content="{{ site_url }}/assets/o7am/logo_wide.jpg" />
+{% if noindex | default(false) %}
+<meta name="robots" content="noindex" />
+{% else %}
 <link rel="canonical" href="{{ canonical_url }}" />
 <link rel="alternate" hreflang="pl" href="{{ alternate_pl }}" />
 <link rel="alternate" hreflang="en" href="{{ alternate_en }}" />
 <link rel="alternate" hreflang="x-default" href="{{ alternate_x }}" />
+{% endif %}
 <script type="application/ld+json">{{ local_business_schema | tojson }}</script>
