@@ -18,7 +18,8 @@ BUSINESS_ID = f"{SITE_URL}/#business"
 OUT_DIR = Path("out")
 DATA_DIR = Path("data")
 TEMPLATES_DIR = Path("templates")
-STATIC_FILES = ["style.css", "app.js", "theme.js", "CNAME", "robots.txt", "llms.txt"]
+# _headers / _redirects are Cloudflare Pages config (security headers, legacy URL redirects).
+STATIC_FILES = ["style.css", "app.js", "theme.js", "robots.txt", "llms.txt", "_headers", "_redirects"]
 # Cache-busted on every deploy: static assets are served with a long max-age (see robots.txt-adjacent
 # CDN config), so a content-hash query string is the only way updates reach already-cached visitors.
 CACHE_BUSTED_ASSETS = ["style.css", "app.js", "theme.js"]
@@ -29,15 +30,14 @@ def file_hash(path, length=10):
 
 
 def clean_url_path(path):
-    """Collapse an 'index.html' filename to its directory form, so the homepage has a
-    single canonical URL (https://www.o7.am/) instead of also being reachable/indexable at
-    /index.html — both serve identical content on GitHub Pages with no redirect between
-    them, which is a duplicate-content signal for search engines."""
+    """Public URL path for an output file: 'index.html' collapses to its directory and other
+    pages drop '.html' (blog.html -> blog). Cloudflare Pages 308-redirects the '.html' forms to
+    exactly these, so canonicals, sitemap and links must use them or every URL is a redirect."""
     if path == "index.html":
         return ""
     if path.endswith("/index.html"):
         return path[: -len("index.html")]
-    return path
+    return path.removesuffix(".html")
 
 
 def page_title(item, loc):
@@ -278,17 +278,6 @@ def main():
             if dest.exists():
                 shutil.rmtree(dest)
             shutil.copytree(src, dest)
-
-    # Redirect /en.html to EN homepage (GitHub Pages doesn't serve /en as directory index)
-    (out / "en.html").write_text(
-        '<!DOCTYPE html><html><head><meta charset="utf-8">'
-        f'<link rel="canonical" href="{SITE_URL}/en/"><meta name="robots" content="noindex">'
-        '<meta http-equiv="refresh" content="0;url=en/">'
-        '<script>location.href="en/";</script>'
-        '<title>Redirect to English</title></head>'
-        '<body><p><a href="en/">English version</a></p></body></html>',
-        encoding="utf-8",
-    )
 
     print(f"Built {len(pages)} pages into {OUT_DIR}/")
 

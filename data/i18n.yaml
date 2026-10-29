@@ -59,7 +59,7 @@ pl:
         <li>Trwałe wydruki z kodami QR lub wbudowanymi tagami NFC — fizyczne oznaczenia, plakietki czy szyldy z działającym kodem QR lub chipem NFC, do interaktywnego marketingu lub oznaczania sprzętu.</li>
         <li>Szybkie prototypowanie wspomagane AI — od pomysłu do fizycznego PoC w krótkim czasie, a potem wspólna iteracja z Tobą w cyklu "drukuj - testuj - popraw" (fast fail, fast learn).</li>
         <li>Części zamienne do trudno dostępnych lub wycofanych z produkcji elementów — w tym odwzorowanie przez skanowanie 3D lub na podstawie pomiarów czy zdjęć, gdy nie ma oryginalnego pliku.</li>
-        <li>Gadżety reklamowe i marketingowe drukowane na żądanie w małych seriach, bez dużego minimum zamówienia — zobacz nasz <a href="/portfolios/3d_prints.html">brandowany uchwyt na filtry V60-2 Hario</a> jako realny przykład.</li>
+        <li>Gadżety reklamowe i marketingowe drukowane na żądanie w małych seriach, bez dużego minimum zamówienia — zobacz nasz <a href="/portfolios/3d_prints">brandowany uchwyt na filtry V60-2 Hario</a> jako realny przykład.</li>
         <li>Wyślij swój plik (STL/STEP) lub po prostu pomysł — wycenimy go indywidualnie (docelowo planujemy też narzędzie do samoobsługowej wyceny).</li>
         <li>Niestandardowe uchwyty i przyrządy warsztatowe dla innych małych firm i twórców — narzędzia szyte na miarę, które przyspieszają i ułatwiają ręczną pracę.</li>
         <li>Druk wielokolorowy i wielomateriałowy (MMU) oraz filament wzmacniany włóknem węglowym dla elementów wymagających większej wytrzymałości niż standardowe PLA.</li>
@@ -168,7 +168,7 @@ en:
         <li>Durable QR-code and NFC-embedded prints — physical tags, plaques or signage with a working QR code or embedded NFC chip, for interactive marketing or asset tracking.</li>
         <li>Rapid, AI-assisted prototyping — from idea to physical proof-of-concept fast, then iterate together with you in a print-test-refine cycle ("fast fail, fast learn").</li>
         <li>Replacement parts for hard-to-find or discontinued items — including reconstruction via 3D scanning or remodeling from measurements or photos when no original file exists.</li>
-        <li>On-demand promotional and marketing items in small batches, no large minimum order — see our <a href="/en/portfolios/3d_prints.html">branded V60-2 Hario filter holder</a> as a real example.</li>
+        <li>On-demand promotional and marketing items in small batches, no large minimum order — see our <a href="/en/portfolios/3d_prints">branded V60-2 Hario filter holder</a> as a real example.</li>
         <li>Bring your own file (STL/STEP) — or just an idea — and we'll quote it individually (a self-service pricing tool is on our roadmap).</li>
         <li>Custom jigs and fixtures for workshops and other small businesses — purpose-built tools that make manual work faster and more consistent.</li>
         <li>Multi-color and multi-material printing (MMU), plus carbon-fiber-reinforced filament for parts that need more strength than standard PLA.</li>
